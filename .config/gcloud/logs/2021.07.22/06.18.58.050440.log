@@ -1,0 +1,23 @@
+2021-07-22 06:18:58,051 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2021-07-22 06:18:58,054 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'list']
+2021-07-22 06:18:58,056 DEBUG    root            Running [gcloud.config.list] with arguments: [--format: "core.project", SECTION/PROPERTY: "project"]
+2021-07-22 06:18:58,060 DEBUG    root            (gcloud.config.list) Name expected [config *HERE* core.project].
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 811, in Run
+    display_info=self.ai.display_info).Display()
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/display.py", line 475, in Display
+    self._InitPrinter()
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/display.py", line 434, in _InitPrinter
+    self._format, defaults=self._defaults, out=log.out)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/resource/resource_printer.py", line 223, in Printer
+    defaults=defaults, symbols=resource_transform.GetTransforms()))
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/resource/resource_projector.py", line 558, in Compile
+    expression, defaults=defaults, symbols=symbols, compiler=Compile)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/resource/resource_projection_parser.py", line 539, in Parse
+    compiler=compiler).Parse(expression)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/resource/resource_projection_parser.py", line 515, in Parse
+    'Name expected [{0}].'.format(self._lex.Annotate(here)))
+googlecloudsdk.core.resource.resource_exceptions.ExpressionSyntaxError: Name expected [config *HERE* core.project].
+2021-07-22 06:18:58,064 ERROR    root            (gcloud.config.list) Name expected [config *HERE* core.project].

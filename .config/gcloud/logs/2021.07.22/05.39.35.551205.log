@@ -1,0 +1,10 @@
+2021-07-22 05:39:35,572 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 05:39:35,575 ERROR    root            (gcloud.ai-platform) Command name argument expected.
+2021-07-22 05:39:35,577 DEBUG    root            No implementation for release track [GA] for element: [/usr/lib/google-cloud-sdk/lib/surface/ai_platform/locations]
+2021-07-22 05:39:35,579 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'operations']
+2021-07-22 05:39:35,583 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'versions']
+2021-07-22 05:39:35,587 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 05:39:35,592 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'models']
+2021-07-22 05:39:35,600 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'predict']
+2021-07-22 05:39:35,604 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local']
+2021-07-22 05:39:35,610 DEBUG    root            No implementation for release track [GA] for element: [/usr/lib/google-cloud-sdk/lib/surface/ai_platform/explain]

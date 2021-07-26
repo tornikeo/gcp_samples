@@ -1,0 +1,52 @@
+2021-07-26 17:39:17,038 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-26 17:39:17,042 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-26 17:39:17,045 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit']
+2021-07-26 17:39:17,074 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit', 'training']
+2021-07-26 17:39:17,110 DEBUG    root            Running [gcloud.ai-platform.jobs.submit.training] with arguments: [--job-dir: "<googlecloudsdk.api_lib.storage.storage_util.ObjectReference object at 0x7ff3eaa1dc50>", --module-name: "trainer.task", --package-path: "trainer", --python-version: "3.7", --runtime-version: "2.1", JOB: "simple_20210726173544"]
+2021-07-26 17:39:17,123 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-26 17:39:17,126 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-26 17:39:17,127 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-26 17:39:17,128 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-26 17:39:17,131 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 250
+2021-07-26 17:39:17,144 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-26 17:39:17,145 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-26 17:39:17,147 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-26 17:39:17,147 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-26 17:39:17,150 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 250
+2021-07-26 17:39:17,156 DEBUG    root            (gcloud.ai-platform.jobs.submit.training) The required property [region] is not currently set.
+It can be set on a per-command basis by re-running your command with the [--region] flag.
+
+You may set it for your current workspace by running:
+
+  $ gcloud config set compute/region VALUE
+
+or it can be set temporarily by the environment variable [CLOUDSDK_COMPUTE_REGION]
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/ai_platform/jobs/submit/training.py", line 122, in Run
+    custom_train_server_config=custom_container_config)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/ml_engine/jobs_util.py", line 373, in SubmitTraining
+    region = properties.VALUES.compute.region.Get(required=True)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/properties.py", line 2958, in Get
+    required)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/properties.py", line 3266, in _GetProperty
+    raise RequiredPropertyError(prop, flag=flag_to_use)
+googlecloudsdk.core.properties.RequiredPropertyError: The required property [region] is not currently set.
+It can be set on a per-command basis by re-running your command with the [--region] flag.
+
+You may set it for your current workspace by running:
+
+  $ gcloud config set compute/region VALUE
+
+or it can be set temporarily by the environment variable [CLOUDSDK_COMPUTE_REGION]
+2021-07-26 17:39:17,164 ERROR    root            (gcloud.ai-platform.jobs.submit.training) The required property [region] is not currently set.
+It can be set on a per-command basis by re-running your command with the [--region] flag.
+
+You may set it for your current workspace by running:
+
+  $ gcloud config set compute/region VALUE
+
+or it can be set temporarily by the environment variable [CLOUDSDK_COMPUTE_REGION]

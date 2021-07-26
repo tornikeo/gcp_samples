@@ -1,0 +1,185 @@
+2021-07-22 07:27:30,914 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 07:27:30,916 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 07:27:30,926 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'describe']
+2021-07-22 07:27:30,934 DEBUG    root            Running [gcloud.ai-platform.jobs.describe] with arguments: [JOB: "census_210722_071201"]
+2021-07-22 07:27:30,947 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:27:30,950 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:27:30,951 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:27:30,952 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:27:30,955 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 250
+2021-07-22 07:27:30,966 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:27:30,968 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:27:30,969 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:27:30,969 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:27:30,972 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 250
+2021-07-22 07:27:30,982 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): ml.googleapis.com:443
+2021-07-22 07:27:31,280 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/jobs/census_210722_071201?alt=json HTTP/1.1" 200 None
+2021-07-22 07:27:31,283 INFO     root            Display format: "default"
+2021-07-22 07:27:31,286 INFO     ___FILE_ONLY___ createTime
+2021-07-22 07:27:31,286 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,286 INFO     ___FILE_ONLY___  '
+2021-07-22 07:27:31,287 INFO     ___FILE_ONLY___ 2021-07-22T07:12:04Z
+2021-07-22 07:27:31,287 INFO     ___FILE_ONLY___ '
+2021-07-22 07:27:31,287 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,287 INFO     ___FILE_ONLY___ endTime
+2021-07-22 07:27:31,287 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,287 INFO     ___FILE_ONLY___  '
+2021-07-22 07:27:31,288 INFO     ___FILE_ONLY___ 2021-07-22T07:16:05Z
+2021-07-22 07:27:31,288 INFO     ___FILE_ONLY___ '
+2021-07-22 07:27:31,288 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,288 INFO     ___FILE_ONLY___ etag
+2021-07-22 07:27:31,288 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,288 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,288 INFO     ___FILE_ONLY___ _nmLsk8VO8k=
+2021-07-22 07:27:31,289 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,289 INFO     ___FILE_ONLY___ jobId
+2021-07-22 07:27:31,289 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,289 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,289 INFO     ___FILE_ONLY___ census_210722_071201
+2021-07-22 07:27:31,289 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,289 INFO     ___FILE_ONLY___ startTime
+2021-07-22 07:27:31,290 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,290 INFO     ___FILE_ONLY___  '
+2021-07-22 07:27:31,290 INFO     ___FILE_ONLY___ 2021-07-22T07:13:02Z
+2021-07-22 07:27:31,290 INFO     ___FILE_ONLY___ '
+2021-07-22 07:27:31,290 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,290 INFO     ___FILE_ONLY___ state
+2021-07-22 07:27:31,291 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,291 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,291 INFO     ___FILE_ONLY___ SUCCEEDED
+2021-07-22 07:27:31,291 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,291 INFO     ___FILE_ONLY___ trainingInput
+2021-07-22 07:27:31,292 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,292 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,292 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,292 INFO     ___FILE_ONLY___ args
+2021-07-22 07:27:31,292 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,292 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,292 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,293 INFO     ___FILE_ONLY___ -
+2021-07-22 07:27:31,293 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,293 INFO     ___FILE_ONLY___ --train-files
+2021-07-22 07:27:31,293 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,293 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,293 INFO     ___FILE_ONLY___ -
+2021-07-22 07:27:31,293 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,293 INFO     ___FILE_ONLY___ --eval-files
+2021-07-22 07:27:31,294 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,294 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,294 INFO     ___FILE_ONLY___ -
+2021-07-22 07:27:31,294 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,294 INFO     ___FILE_ONLY___ --train-steps
+2021-07-22 07:27:31,294 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,294 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,294 INFO     ___FILE_ONLY___ -
+2021-07-22 07:27:31,295 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,295 INFO     ___FILE_ONLY___ '
+2021-07-22 07:27:31,295 INFO     ___FILE_ONLY___ 1000
+2021-07-22 07:27:31,295 INFO     ___FILE_ONLY___ '
+2021-07-22 07:27:31,295 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,295 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,295 INFO     ___FILE_ONLY___ -
+2021-07-22 07:27:31,295 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,295 INFO     ___FILE_ONLY___ --eval-steps
+2021-07-22 07:27:31,296 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,296 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,296 INFO     ___FILE_ONLY___ -
+2021-07-22 07:27:31,296 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,296 INFO     ___FILE_ONLY___ '
+2021-07-22 07:27:31,296 INFO     ___FILE_ONLY___ 100
+2021-07-22 07:27:31,296 INFO     ___FILE_ONLY___ '
+2021-07-22 07:27:31,296 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,297 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,297 INFO     ___FILE_ONLY___ -
+2021-07-22 07:27:31,297 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,297 INFO     ___FILE_ONLY___ --verbosity
+2021-07-22 07:27:31,297 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,297 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,297 INFO     ___FILE_ONLY___ -
+2021-07-22 07:27:31,297 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,298 INFO     ___FILE_ONLY___ DEBUG
+2021-07-22 07:27:31,298 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,298 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,298 INFO     ___FILE_ONLY___ jobDir
+2021-07-22 07:27:31,298 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,298 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,298 INFO     ___FILE_ONLY___ gs://ultra-evening-318614-aiplatform/census_210722_071201
+2021-07-22 07:27:31,299 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,299 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,299 INFO     ___FILE_ONLY___ packageUris
+2021-07-22 07:27:31,299 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,299 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,299 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,299 INFO     ___FILE_ONLY___ -
+2021-07-22 07:27:31,300 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,300 INFO     ___FILE_ONLY___ gs://ultra-evening-318614-aiplatform/census_210722_071201/packages/3e46ae11a2fb3fa49389860384a1ad0f3dee66517ed6dc122d5a92e3694a15d5/trainer-0.0.0.tar.gz
+2021-07-22 07:27:31,300 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,300 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,300 INFO     ___FILE_ONLY___ pythonModule
+2021-07-22 07:27:31,300 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,301 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,301 INFO     ___FILE_ONLY___ trainer.task
+2021-07-22 07:27:31,301 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,301 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,301 INFO     ___FILE_ONLY___ pythonVersion
+2021-07-22 07:27:31,301 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,301 INFO     ___FILE_ONLY___  '
+2021-07-22 07:27:31,302 INFO     ___FILE_ONLY___ 3.7
+2021-07-22 07:27:31,302 INFO     ___FILE_ONLY___ '
+2021-07-22 07:27:31,302 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,302 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,302 INFO     ___FILE_ONLY___ region
+2021-07-22 07:27:31,302 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,302 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,303 INFO     ___FILE_ONLY___ us-central1
+2021-07-22 07:27:31,303 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,303 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,303 INFO     ___FILE_ONLY___ runtimeVersion
+2021-07-22 07:27:31,303 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,303 INFO     ___FILE_ONLY___  '
+2021-07-22 07:27:31,303 INFO     ___FILE_ONLY___ 2.1
+2021-07-22 07:27:31,303 INFO     ___FILE_ONLY___ '
+2021-07-22 07:27:31,304 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,304 INFO     ___FILE_ONLY___ trainingOutput
+2021-07-22 07:27:31,304 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,304 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,304 INFO     ___FILE_ONLY___   
+2021-07-22 07:27:31,304 INFO     ___FILE_ONLY___ consumedMLUnits
+2021-07-22 07:27:31,305 INFO     ___FILE_ONLY___ :
+2021-07-22 07:27:31,305 INFO     ___FILE_ONLY___  
+2021-07-22 07:27:31,305 INFO     ___FILE_ONLY___ 0.06
+2021-07-22 07:27:31,305 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:27:31,307 INFO     ___FILE_ONLY___ 
+View job in the Cloud Console at:
+https://console.cloud.google.com/mlengine/jobs/census_210722_071201?project=ultra-evening-318614
+
+2021-07-22 07:27:31,307 INFO     ___FILE_ONLY___ 
+View logs at:
+https://console.cloud.google.com/logs?resource=ml_job%2Fjob_id%2Fcensus_210722_071201&project=ultra-evening-318614
+
+2021-07-22 07:27:31,308 DEBUG    root            SDK update checks are disabled.

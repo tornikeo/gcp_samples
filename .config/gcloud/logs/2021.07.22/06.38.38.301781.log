@@ -1,0 +1,60 @@
+2021-07-22 06:38:38,317 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 06:38:38,319 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 06:38:38,320 DEBUG    root            Running [gcloud.ai-platform.jobs] with arguments: [--help: "None"]
+2021-07-22 06:38:38,330 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'stream_logs']
+2021-07-22 06:38:38,331 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'describe']
+2021-07-22 06:38:38,332 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'update']
+2021-07-22 06:38:38,334 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'list']
+2021-07-22 06:38:38,335 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'cancel']
+2021-07-22 06:38:38,336 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit']
+2021-07-22 06:38:38,338 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai_platform']
+2021-07-22 06:38:38,339 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'jobs']
+2021-07-22 06:38:38,340 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai_platform']
+2021-07-22 06:38:38,341 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'jobs']
+2021-07-22 06:38:38,345 DEBUG    root            Loaded Command Group: ['gcloud', 'help']
+2021-07-22 06:38:38,349 INFO     ___FILE_ONLY___ [m[1mNAME[m
+    gcloud ai-platform jobs - AI Platform Jobs commands
+
+[m[1mSYNOPSIS[m
+    [1mgcloud ai-platform jobs[m [4mGROUP[m | [4mCOMMAND[m [[4mGCLOUD_WIDE_FLAG ...[m]
+
+[m[1mDESCRIPTION[m
+    AI Platform Jobs commands.
+
+[m[1mGCLOUD WIDE FLAGS[m
+    These flags are available to all commands: --help.
+
+    Run [1m$ gcloud help[m for details.
+
+[m[1mGROUPS[m
+    [1m[1;4mGROUP[1m[m is one of the following:
+
+     [1msubmit[m
+        AI Platform Jobs submit commands.
+
+[m[1mCOMMANDS[m
+    [1m[1;4mCOMMAND[1m[m is one of the following:
+
+     [1mcancel[m
+        Cancel a running AI Platform job.
+
+     [1mdescribe[m
+        Describe an AI Platform job.
+
+     [1mlist[m
+        List existing AI Platform jobs.
+
+     [1mstream-logs[m
+        Show logs from a running AI Platform job.
+
+     [1mupdate[m
+        Update an AI Platform job.
+
+[m[1mNOTES[m
+    These variants are also available:
+
+        $ gcloud alpha ai-platform jobs
+
+        $ gcloud beta ai-platform jobs
+
+[m

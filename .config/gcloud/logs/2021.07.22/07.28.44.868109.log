@@ -1,0 +1,71 @@
+2021-07-22 07:28:44,883 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 07:28:44,884 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'versions']
+2021-07-22 07:28:44,895 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'versions', 'create']
+2021-07-22 07:28:44,902 DEBUG    root            Running [gcloud.ai-platform.versions.create] with arguments: [--model: "census", --origin: "gs://ultra-evening-318614-aiplatform/census_210722_071201/keras_export/", --python-version: "3.7", --region: "global", --runtime-version: "2.1", VERSION: "v1"]
+2021-07-22 07:28:44,905 INFO     ___FILE_ONLY___ Using endpoint [https://ml.googleapis.com/]
+
+2021-07-22 07:28:44,916 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:28:44,920 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:28:44,921 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:28:44,922 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:28:44,924 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 250
+2021-07-22 07:28:44,936 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:28:44,938 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:28:44,939 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:28:44,940 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:28:44,942 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 250
+2021-07-22 07:28:44,949 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:28:44,950 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:28:44,951 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:28:44,952 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:28:44,954 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 250
+2021-07-22 07:28:44,959 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:28:44,961 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:28:44,962 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:28:44,962 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:28:44,964 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 250
+2021-07-22 07:28:44,972 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): ml.googleapis.com:443
+2021-07-22 07:28:46,186 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "POST /v1/projects/ultra-evening-318614/models/census/versions?alt=json HTTP/1.1" 200 None
+2021-07-22 07:28:46,195 INFO     ___FILE_ONLY___ Creating version (this might take a few minutes)......
+2021-07-22 07:28:46,199 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): ml.googleapis.com:443
+2021-07-22 07:28:46,496 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:28:51,608 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:28:56,720 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:01,828 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:06,925 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:12,020 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:17,131 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:22,232 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:27,332 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:32,428 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:37,526 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:42,631 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:47,751 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:52,849 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:29:57,942 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:03,059 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:08,148 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:13,257 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:18,361 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:23,456 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:28,551 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:33,648 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:38,760 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:43,860 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:48,975 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:54,082 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:30:59,179 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:04,272 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:09,375 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:14,487 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:19,570 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:24,661 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:29,747 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:34,825 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:39,910 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:45,017 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:50,105 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:31:55,190 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:32:00,328 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/operations/create_census_v1-1626938925215?alt=json HTTP/1.1" 200 None
+2021-07-22 07:32:00,501 INFO     root            Display format: "none"
+2021-07-22 07:32:00,503 DEBUG    root            SDK update checks are disabled.

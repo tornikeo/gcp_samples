@@ -1,0 +1,35 @@
+2021-07-22 06:23:26,969 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2021-07-22 06:23:26,973 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'list']
+2021-07-22 06:23:26,977 DEBUG    root            Running [gcloud.config.list] with arguments: [--format: "key(core.project)", SECTION/PROPERTY: "project"]
+2021-07-22 06:23:26,982 DEBUG    root            (gcloud.config.list) Format must be one of config, csv, default, diff, disable, flattened, get, json, list, multi, none, object, table, text, value, yaml; received [key].
+
+For information on output formats:
+  $ gcloud topic formats
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/resource/resource_printer.py", line 229, in Printer
+    printer_class = _FORMATTERS[printer_name]
+KeyError: 'key'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 811, in Run
+    display_info=self.ai.display_info).Display()
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/display.py", line 475, in Display
+    self._InitPrinter()
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/display.py", line 434, in _InitPrinter
+    self._format, defaults=self._defaults, out=log.out)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/resource/resource_printer.py", line 236, in Printer
+    """.format(', '.join(SupportedFormats()), printer_name))
+googlecloudsdk.core.resource.resource_printer.UnknownFormatError: Format must be one of config, csv, default, diff, disable, flattened, get, json, list, multi, none, object, table, text, value, yaml; received [key].
+
+For information on output formats:
+  $ gcloud topic formats
+
+2021-07-22 06:23:26,983 ERROR    root            (gcloud.config.list) Format must be one of config, csv, default, diff, disable, flattened, get, json, list, multi, none, object, table, text, value, yaml; received [key].
+
+For information on output formats:
+  $ gcloud topic formats
+

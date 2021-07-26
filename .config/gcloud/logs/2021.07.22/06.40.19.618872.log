@@ -1,0 +1,105 @@
+2021-07-22 06:40:19,634 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 06:40:19,635 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 06:40:19,637 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit']
+2021-07-22 06:40:19,651 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit', 'training']
+2021-07-22 06:40:19,679 DEBUG    root            Running [gcloud.ai-platform.jobs.submit.training] with arguments: [--job-dir: "<googlecloudsdk.api_lib.storage.storage_util.ObjectReference object at 0x7ff98f3c2b90>", --module-name: "trainer.task", --package-path: "trainer/", --python-version: "3.7", --region: "us-central1", --runtime-version: "2.5", JOB: "census_210722_064019"]
+2021-07-22 06:40:19,691 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 06:40:19,693 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 06:40:19,695 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 06:40:19,695 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 06:40:19,698 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 249
+2021-07-22 06:40:19,713 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 06:40:19,714 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 06:40:19,716 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 06:40:19,716 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 06:40:19,718 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 249
+2021-07-22 06:40:19,725 DEBUG    root            Looking for setup.py file at [/home/jupyter/training-data-analyst/self-paced-labs/ai-platform-qwikstart/setup.py]
+2021-07-22 06:40:19,725 INFO     root            Generating temporary setup.py file:
+from setuptools import setup, find_packages
+
+if __name__ == '__main__':
+    setup(
+        name='trainer',
+        packages=find_packages(include=['trainer'])
+    )
+
+2021-07-22 06:40:19,725 DEBUG    root            Executing command: ['/opt/conda/bin/python3', '-S', '/home/jupyter/training-data-analyst/self-paced-labs/ai-platform-qwikstart/setup.py', 'egg_info', '--egg-base', '/tmp/tmpr1p_3qbf', 'build', '--build-base', '/tmp/tmpr1p_3qbf', '--build-temp', '/tmp/tmpr1p_3qbf', 'sdist', '--dist-dir', '/tmp/tmpe9pv1ei9/output']
+2021-07-22 06:40:19,931 DEBUG    root            Executing command: ['/opt/conda/bin/python3', '/home/jupyter/training-data-analyst/self-paced-labs/ai-platform-qwikstart/setup.py', 'egg_info', '--egg-base', '/tmp/tmpr1p_3qbf', 'build', '--build-base', '/tmp/tmpr1p_3qbf', '--build-temp', '/tmp/tmpr1p_3qbf', 'sdist', '--dist-dir', '/tmp/tmpe9pv1ei9/output']
+2021-07-22 06:40:20,327 DEBUG    root            Python packaging resulted in [/tmp/tmpe9pv1ei9/output/trainer-0.0.0.tar.gz]
+2021-07-22 06:40:20,327 DEBUG    root            Couldn't remove file [/home/jupyter/training-data-analyst/self-paced-labs/ai-platform-qwikstart/setup.pyc] (it may never have been created).
+2021-07-22 06:40:20,333 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 06:40:20,335 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 06:40:20,337 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 06:40:20,337 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 06:40:20,339 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 249
+2021-07-22 06:40:20,345 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 06:40:20,347 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 06:40:20,348 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 06:40:20,348 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 06:40:20,350 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 249
+2021-07-22 06:40:20,372 INFO     root            Uploading [/tmp/tmpe9pv1ei9/output/trainer-0.0.0.tar.gz] to [ultra-evening-318614-aiplatform/census_210722_064019/packages/c2e02db4a9134e98a8aa57271d314bec4d71c63fce7052a38b1ac08d9e4e0d68/trainer-0.0.0.tar.gz]
+2021-07-22 06:40:20,377 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2021-07-22 06:40:20,507 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "POST /upload/storage/v1/b/ultra-evening-318614-aiplatform/o?alt=json&name=census_210722_064019%2Fpackages%2Fc2e02db4a9134e98a8aa57271d314bec4d71c63fce7052a38b1ac08d9e4e0d68%2Ftrainer-0.0.0.tar.gz&uploadType=multipart HTTP/1.1" 200 1246
+2021-07-22 06:40:20,510 DEBUG    root            Using ['gs://ultra-evening-318614-aiplatform/census_210722_064019/packages/c2e02db4a9134e98a8aa57271d314bec4d71c63fce7052a38b1ac08d9e4e0d68/trainer-0.0.0.tar.gz'] as trainer uris
+2021-07-22 06:40:20,515 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): ml.googleapis.com:443
+2021-07-22 06:40:20,773 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "POST /v1/projects/ultra-evening-318614/jobs?alt=json HTTP/1.1" 403 None
+2021-07-22 06:40:20,784 DEBUG    root            (gcloud.ai-platform.jobs.submit.training) User [114789316337-compute@developer.gserviceaccount.com] does not have permission to access projects instance [ultra-evening-318614] (or it may not exist): AI Platform Training & Prediction API has not been used in project 114789316337 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/ml.googleapis.com/overview?project=114789316337 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+- '@type': type.googleapis.com/google.rpc.Help
+  links:
+  - description: Google developers console API activation
+    url: https://console.developers.google.com/apis/api/ml.googleapis.com/overview?project=114789316337
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: googleapis.com
+  metadata:
+    consumer: projects/114789316337
+    service: ml.googleapis.com
+  reason: SERVICE_DISABLED
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/ai_platform/jobs/submit/training.py", line 122, in Run
+    custom_train_server_config=custom_container_config)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/ml_engine/jobs_util.py", line 416, in SubmitTraining
+    job = jobs_client.Create(project_ref, job)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/ml_engine/jobs.py", line 93, in Create
+    job=job))
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/third_party/apis/ml/v1/ml_v1_client.py", line 100, in Create
+    config, request, global_params=global_params)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/base_api.py", line 735, in _RunMethod
+    http, http_request, **opts)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/http_wrapper.py", line 360, in MakeRequest
+    max_retry_wait, total_wait_sec))
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/http_wrapper.py", line 304, in HandleExceptionsAndRebuildHttpConnections
+    raise retry_args.exc
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/http_wrapper.py", line 350, in MakeRequest
+    check_response_func=check_response_func)
+  File "/usr/bin/../lib/google-cloud-sdk/lib/third_party/apitools/base/py/http_wrapper.py", line 406, in _MakeRequestNoRetry
+    check_response_func(response)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis.py", line 242, in _CheckResponseForApiEnablement
+    PromptToEnableApi(*enablement_info)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/api_lib/util/apis.py", line 209, in PromptToEnableApi
+    raise exception
+googlecloudsdk.api_lib.util.exceptions.HttpException: User [114789316337-compute@developer.gserviceaccount.com] does not have permission to access projects instance [ultra-evening-318614] (or it may not exist): AI Platform Training & Prediction API has not been used in project 114789316337 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/ml.googleapis.com/overview?project=114789316337 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+- '@type': type.googleapis.com/google.rpc.Help
+  links:
+  - description: Google developers console API activation
+    url: https://console.developers.google.com/apis/api/ml.googleapis.com/overview?project=114789316337
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: googleapis.com
+  metadata:
+    consumer: projects/114789316337
+    service: ml.googleapis.com
+  reason: SERVICE_DISABLED
+2021-07-22 06:40:20,796 ERROR    root            (gcloud.ai-platform.jobs.submit.training) User [114789316337-compute@developer.gserviceaccount.com] does not have permission to access projects instance [ultra-evening-318614] (or it may not exist): AI Platform Training & Prediction API has not been used in project 114789316337 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/ml.googleapis.com/overview?project=114789316337 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.
+- '@type': type.googleapis.com/google.rpc.Help
+  links:
+  - description: Google developers console API activation
+    url: https://console.developers.google.com/apis/api/ml.googleapis.com/overview?project=114789316337
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: googleapis.com
+  metadata:
+    consumer: projects/114789316337
+    service: ml.googleapis.com
+  reason: SERVICE_DISABLED

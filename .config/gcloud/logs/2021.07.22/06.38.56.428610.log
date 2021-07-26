@@ -1,0 +1,44 @@
+2021-07-22 06:38:56,453 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 06:38:56,455 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 06:38:56,457 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit']
+2021-07-22 06:38:56,458 DEBUG    root            Running [gcloud.ai-platform.jobs.submit] with arguments: [--help: "None"]
+2021-07-22 06:38:56,473 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit', 'prediction']
+2021-07-22 06:38:56,482 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit', 'training']
+2021-07-22 06:38:56,524 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai_platform']
+2021-07-22 06:38:56,526 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'jobs']
+2021-07-22 06:38:56,527 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'jobs', 'submit']
+2021-07-22 06:38:56,529 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai_platform']
+2021-07-22 06:38:56,531 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'jobs']
+2021-07-22 06:38:56,532 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'jobs', 'submit']
+2021-07-22 06:38:56,537 DEBUG    root            Loaded Command Group: ['gcloud', 'help']
+2021-07-22 06:38:56,542 INFO     ___FILE_ONLY___ [m[1mNAME[m
+    gcloud ai-platform jobs submit - AI Platform Jobs submit commands
+
+[m[1mSYNOPSIS[m
+    [1mgcloud ai-platform jobs submit[m [4mCOMMAND[m [[4mGCLOUD_WIDE_FLAG ...[m]
+
+[m[1mDESCRIPTION[m
+    AI Platform Jobs submit commands.
+
+[m[1mGCLOUD WIDE FLAGS[m
+    These flags are available to all commands: --help.
+
+    Run [1m$ gcloud help[m for details.
+
+[m[1mCOMMANDS[m
+    [1m[1;4mCOMMAND[1m[m is one of the following:
+
+     [1mprediction[m
+        Start an AI Platform batch prediction job.
+
+     [1mtraining[m
+        Submit an AI Platform training job.
+
+[m[1mNOTES[m
+    These variants are also available:
+
+        $ gcloud alpha ai-platform jobs submit
+
+        $ gcloud beta ai-platform jobs submit
+
+[m

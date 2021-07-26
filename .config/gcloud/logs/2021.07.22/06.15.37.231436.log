@@ -1,0 +1,44 @@
+2021-07-22 06:15:37,254 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 06:15:37,257 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local']
+2021-07-22 06:15:37,260 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local', 'predict']
+2021-07-22 06:15:37,268 DEBUG    root            Running [gcloud.ai-platform.local.predict] with arguments: [--json-instances: "./test.json", --model-dir: "output/keras_export/"]
+2021-07-22 06:15:37,269 INFO     ___FILE_ONLY___ If the signature defined in the model is not serving_default then you must specify it via --signature-name flag, otherwise the command may fail.
+
+2021-07-22 06:15:40,317 WARNING  root            WARNING:tensorflow:From /opt/conda/lib/python3.7/site-packages/tensorflow/python/compat/v2_compat.py:96: disable_resource_variables (from tensorflow.python.ops.variable_scope) is deprecated and will be removed in a future version.
+Instructions for updating:
+non-resource variables are not supported in the long term
+2021-07-22 06:15:39.725936: I tensorflow/core/common_runtime/process_util.cc:146] Creating new thread pool with default inter op setting: 2. Tune using inter_op_parallelism_threads for best performance.
+WARNING:tensorflow:From /usr/lib/google-cloud-sdk/lib/third_party/ml_sdk/cloud/ml/prediction/frameworks/tf_prediction_lib.py:236: load (from tensorflow.python.saved_model.loader_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This function will only be available through the v1 compatibility library as tf.compat.v1.saved_model.loader.load or tf.compat.v1.saved_model.load. There will be a new function for importing SavedModels in Tensorflow 2.0.
+WARNING:tensorflow:From /usr/lib/google-cloud-sdk/lib/third_party/ml_sdk/cloud/ml/prediction/frameworks/tf_prediction_lib.py:236: load (from tensorflow.python.saved_model.loader_impl) is deprecated and will be removed in a future version.
+Instructions for updating:
+This function will only be available through the v1 compatibility library as tf.compat.v1.saved_model.loader.load or tf.compat.v1.saved_model.load. There will be a new function for importing SavedModels in Tensorflow 2.0.
+2021-07-22 06:15:39.780849: I tensorflow/core/platform/profile_utils/cpu_utils.cc:114] CPU Frequency: 2200215000 Hz
+WARNING:root:Error updating signature __saved_model_init_op: The name 'NoOp' refers to an Operation, not a Tensor. Tensor names must be of the form "<op_name>:<output_index>".
+
+2021-07-22 06:15:40,319 INFO     root            Display format: "default 
+          table(
+              predictions:format="table(
+                  dense_4
+              )"
+          )"
+2021-07-22 06:15:40,321 INFO     ___FILE_ONLY___ DENSE_4
+2021-07-22 06:15:40,321 INFO     ___FILE_ONLY___ 
+
+2021-07-22 06:15:40,321 INFO     ___FILE_ONLY___ [0.051321566104888916]
+2021-07-22 06:15:40,321 INFO     ___FILE_ONLY___ 
+
+2021-07-22 06:15:40,321 INFO     ___FILE_ONLY___ [0.03201475739479065]
+2021-07-22 06:15:40,321 INFO     ___FILE_ONLY___ 
+
+2021-07-22 06:15:40,321 INFO     ___FILE_ONLY___ [0.16047948598861694]
+2021-07-22 06:15:40,322 INFO     ___FILE_ONLY___ 
+
+2021-07-22 06:15:40,322 INFO     ___FILE_ONLY___ [0.13611936569213867]
+2021-07-22 06:15:40,322 INFO     ___FILE_ONLY___ 
+
+2021-07-22 06:15:40,322 INFO     ___FILE_ONLY___ [0.04655653238296509]
+2021-07-22 06:15:40,322 INFO     ___FILE_ONLY___ 
+
+2021-07-22 06:15:40,323 DEBUG    root            SDK update checks are disabled.

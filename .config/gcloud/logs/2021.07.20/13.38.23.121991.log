@@ -1,0 +1,107 @@
+2021-07-20 13:38:23,160 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2021-07-20 13:38:23,170 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'machine_types']
+2021-07-20 13:38:23,189 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'machine-types', 'describe']
+2021-07-20 13:38:23,203 DEBUG    root            Running [gcloud.compute.machine-types.describe] with arguments: [--zone: "projects/114789316337/zones/us-west1-b", NAME: "n1-standard-2"]
+2021-07-20 13:38:23,225 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-20 13:38:23,229 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-20 13:38:23,232 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-20 13:38:23,234 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-20 13:38:23,238 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 249
+2021-07-20 13:38:23,258 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-20 13:38:23,260 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-20 13:38:23,263 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-20 13:38:23,265 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-20 13:38:23,269 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 249
+2021-07-20 13:38:23,491 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): compute.googleapis.com:443
+2021-07-20 13:38:23,676 DEBUG    urllib3.connectionpool https://compute.googleapis.com:443 "POST /batch/compute/v1 HTTP/1.1" 200 None
+2021-07-20 13:38:23,680 INFO     root            Display format: "default"
+2021-07-20 13:38:23,683 INFO     ___FILE_ONLY___ creationTimestamp
+2021-07-20 13:38:23,683 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,683 INFO     ___FILE_ONLY___  '
+2021-07-20 13:38:23,684 INFO     ___FILE_ONLY___ 1969-12-31T16:00:00.000-08:00
+2021-07-20 13:38:23,684 INFO     ___FILE_ONLY___ '
+2021-07-20 13:38:23,684 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,684 INFO     ___FILE_ONLY___ description
+2021-07-20 13:38:23,684 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,684 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,684 INFO     ___FILE_ONLY___ 2
+2021-07-20 13:38:23,685 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,685 INFO     ___FILE_ONLY___ vCPUs,
+2021-07-20 13:38:23,685 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,685 INFO     ___FILE_ONLY___ 7.5
+2021-07-20 13:38:23,685 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,685 INFO     ___FILE_ONLY___ GB
+2021-07-20 13:38:23,685 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,685 INFO     ___FILE_ONLY___ RAM
+2021-07-20 13:38:23,686 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,686 INFO     ___FILE_ONLY___ guestCpus
+2021-07-20 13:38:23,686 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,686 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,686 INFO     ___FILE_ONLY___ 2
+2021-07-20 13:38:23,686 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,686 INFO     ___FILE_ONLY___ id
+2021-07-20 13:38:23,687 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,687 INFO     ___FILE_ONLY___  '
+2021-07-20 13:38:23,687 INFO     ___FILE_ONLY___ 3002
+2021-07-20 13:38:23,687 INFO     ___FILE_ONLY___ '
+2021-07-20 13:38:23,687 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,687 INFO     ___FILE_ONLY___ imageSpaceGb
+2021-07-20 13:38:23,688 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,688 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,688 INFO     ___FILE_ONLY___ 10
+2021-07-20 13:38:23,688 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,688 INFO     ___FILE_ONLY___ isSharedCpu
+2021-07-20 13:38:23,689 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,689 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,689 INFO     ___FILE_ONLY___ false
+2021-07-20 13:38:23,689 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,689 INFO     ___FILE_ONLY___ kind
+2021-07-20 13:38:23,689 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,690 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,690 INFO     ___FILE_ONLY___ compute#machineType
+2021-07-20 13:38:23,690 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,690 INFO     ___FILE_ONLY___ maximumPersistentDisks
+2021-07-20 13:38:23,690 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,690 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,690 INFO     ___FILE_ONLY___ 128
+2021-07-20 13:38:23,691 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,691 INFO     ___FILE_ONLY___ maximumPersistentDisksSizeGb
+2021-07-20 13:38:23,691 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,691 INFO     ___FILE_ONLY___  '
+2021-07-20 13:38:23,691 INFO     ___FILE_ONLY___ 263168
+2021-07-20 13:38:23,691 INFO     ___FILE_ONLY___ '
+2021-07-20 13:38:23,691 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,692 INFO     ___FILE_ONLY___ memoryMb
+2021-07-20 13:38:23,692 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,692 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,692 INFO     ___FILE_ONLY___ 7680
+2021-07-20 13:38:23,692 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,692 INFO     ___FILE_ONLY___ name
+2021-07-20 13:38:23,693 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,693 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,693 INFO     ___FILE_ONLY___ n1-standard-2
+2021-07-20 13:38:23,693 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,693 INFO     ___FILE_ONLY___ selfLink
+2021-07-20 13:38:23,693 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,694 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,694 INFO     ___FILE_ONLY___ https://www.googleapis.com/compute/v1/projects/ultra-evening-318614/zones/us-west1-b/machineTypes/n1-standard-2
+2021-07-20 13:38:23,694 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,694 INFO     ___FILE_ONLY___ zone
+2021-07-20 13:38:23,694 INFO     ___FILE_ONLY___ :
+2021-07-20 13:38:23,694 INFO     ___FILE_ONLY___  
+2021-07-20 13:38:23,694 INFO     ___FILE_ONLY___ us-west1-b
+2021-07-20 13:38:23,695 INFO     ___FILE_ONLY___ 
+
+2021-07-20 13:38:23,695 DEBUG    root            SDK update checks are disabled.

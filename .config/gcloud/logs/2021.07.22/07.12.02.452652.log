@@ -1,0 +1,69 @@
+2021-07-22 07:12:02,467 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 07:12:02,468 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 07:12:02,470 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit']
+2021-07-22 07:12:02,484 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit', 'training']
+2021-07-22 07:12:02,510 DEBUG    root            Running [gcloud.ai-platform.jobs.submit.training] with arguments: [--job-dir: "<googlecloudsdk.api_lib.storage.storage_util.ObjectReference object at 0x7fdcfc6f6c10>", --module-name: "trainer.task", --package-path: "trainer/", --python-version: "3.7", --region: "us-central1", --runtime-version: "2.1", JOB: "census_210722_071201"]
+2021-07-22 07:12:02,521 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:12:02,524 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:12:02,525 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:12:02,526 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:12:02,529 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 251
+2021-07-22 07:12:02,541 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:12:02,542 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:12:02,543 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:12:02,544 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:12:02,546 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 251
+2021-07-22 07:12:02,551 DEBUG    root            Looking for setup.py file at [/home/jupyter/training-data-analyst/self-paced-labs/ai-platform-qwikstart/setup.py]
+2021-07-22 07:12:02,551 INFO     root            Generating temporary setup.py file:
+from setuptools import setup, find_packages
+
+if __name__ == '__main__':
+    setup(
+        name='trainer',
+        packages=find_packages(include=['trainer'])
+    )
+
+2021-07-22 07:12:02,552 DEBUG    root            Executing command: ['/opt/conda/bin/python3', '-S', '/home/jupyter/training-data-analyst/self-paced-labs/ai-platform-qwikstart/setup.py', 'egg_info', '--egg-base', '/tmp/tmpw28b4yr7', 'build', '--build-base', '/tmp/tmpw28b4yr7', '--build-temp', '/tmp/tmpw28b4yr7', 'sdist', '--dist-dir', '/tmp/tmplro_5z4g/output']
+2021-07-22 07:12:02,764 DEBUG    root            Executing command: ['/opt/conda/bin/python3', '/home/jupyter/training-data-analyst/self-paced-labs/ai-platform-qwikstart/setup.py', 'egg_info', '--egg-base', '/tmp/tmpw28b4yr7', 'build', '--build-base', '/tmp/tmpw28b4yr7', '--build-temp', '/tmp/tmpw28b4yr7', 'sdist', '--dist-dir', '/tmp/tmplro_5z4g/output']
+2021-07-22 07:12:03,244 DEBUG    root            Python packaging resulted in [/tmp/tmplro_5z4g/output/trainer-0.0.0.tar.gz]
+2021-07-22 07:12:03,245 DEBUG    root            Couldn't remove file [/home/jupyter/training-data-analyst/self-paced-labs/ai-platform-qwikstart/setup.pyc] (it may never have been created).
+2021-07-22 07:12:03,254 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:12:03,257 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:12:03,258 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:12:03,259 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:12:03,263 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 251
+2021-07-22 07:12:03,270 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:12:03,272 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:12:03,274 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:12:03,274 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:12:03,278 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 251
+2021-07-22 07:12:03,303 INFO     root            Uploading [/tmp/tmplro_5z4g/output/trainer-0.0.0.tar.gz] to [ultra-evening-318614-aiplatform/census_210722_071201/packages/3e46ae11a2fb3fa49389860384a1ad0f3dee66517ed6dc122d5a92e3694a15d5/trainer-0.0.0.tar.gz]
+2021-07-22 07:12:03,310 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): storage.googleapis.com:443
+2021-07-22 07:12:03,427 DEBUG    urllib3.connectionpool https://storage.googleapis.com:443 "POST /upload/storage/v1/b/ultra-evening-318614-aiplatform/o?alt=json&name=census_210722_071201%2Fpackages%2F3e46ae11a2fb3fa49389860384a1ad0f3dee66517ed6dc122d5a92e3694a15d5%2Ftrainer-0.0.0.tar.gz&uploadType=multipart HTTP/1.1" 200 1246
+2021-07-22 07:12:03,431 DEBUG    root            Using ['gs://ultra-evening-318614-aiplatform/census_210722_071201/packages/3e46ae11a2fb3fa49389860384a1ad0f3dee66517ed6dc122d5a92e3694a15d5/trainer-0.0.0.tar.gz'] as trainer uris
+2021-07-22 07:12:03,439 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): ml.googleapis.com:443
+2021-07-22 07:12:04,391 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "POST /v1/projects/ultra-evening-318614/jobs?alt=json HTTP/1.1" 200 None
+2021-07-22 07:12:04,393 INFO     ___FILE_ONLY___ Job [census_210722_071201] submitted successfully.
+
+2021-07-22 07:12:04,393 INFO     ___FILE_ONLY___ Your job is still active. You may view the status of your job with the command
+
+  $ gcloud ai-platform jobs describe census_210722_071201
+
+or continue streaming the logs with the command
+
+  $ gcloud ai-platform jobs stream-logs census_210722_071201
+
+2021-07-22 07:12:04,395 INFO     root            Display format: "yaml(jobId,state,startTime.date(tz=LOCAL),endTime.date(tz=LOCAL))"
+2021-07-22 07:12:04,397 INFO     ___FILE_ONLY___ jobId
+2021-07-22 07:12:04,398 INFO     ___FILE_ONLY___ :
+2021-07-22 07:12:04,398 INFO     ___FILE_ONLY___  
+2021-07-22 07:12:04,398 INFO     ___FILE_ONLY___ census_210722_071201
+2021-07-22 07:12:04,399 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:12:04,399 INFO     ___FILE_ONLY___ state
+2021-07-22 07:12:04,399 INFO     ___FILE_ONLY___ :
+2021-07-22 07:12:04,399 INFO     ___FILE_ONLY___  
+2021-07-22 07:12:04,399 INFO     ___FILE_ONLY___ QUEUED
+2021-07-22 07:12:04,399 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:12:04,400 DEBUG    root            SDK update checks are disabled.

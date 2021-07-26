@@ -1,0 +1,13 @@
+2021-07-22 07:13:21,205 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 07:13:21,206 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 07:13:21,216 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'cancel']
+2021-07-22 07:13:21,217 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'stream_logs']
+2021-07-22 07:13:21,219 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'describe']
+2021-07-22 07:13:21,220 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'list']
+2021-07-22 07:13:21,221 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit']
+2021-07-22 07:13:21,222 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'update']
+2021-07-22 07:13:21,223 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai_platform']
+2021-07-22 07:13:21,225 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'jobs']
+2021-07-22 07:13:21,226 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai_platform']
+2021-07-22 07:13:21,227 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'jobs']
+2021-07-22 07:13:21,229 ERROR    root            (gcloud.ai-platform.jobs) Invalid choice: 'ls'.

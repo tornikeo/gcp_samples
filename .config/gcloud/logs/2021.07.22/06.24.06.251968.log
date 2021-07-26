@@ -1,0 +1,16 @@
+2021-07-22 06:24:06,253 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2021-07-22 06:24:06,255 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'list']
+2021-07-22 06:24:06,258 DEBUG    root            Running [gcloud.config.list] with arguments: [--format: "value()", SECTION/PROPERTY: "project"]
+2021-07-22 06:24:06,261 INFO     root            Display format: "config value()"
+2021-07-22 06:24:06,262 DEBUG    root            (gcloud.config.list) Format [value] requires a non-empty projection.
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 811, in Run
+    display_info=self.ai.display_info).Display()
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/display.py", line 483, in Display
+    self._printer.Print(self._resources)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/resource/resource_printer_base.py", line 287, in Print
+    'Format [{0}] requires a non-empty projection.'.format(self._name))
+googlecloudsdk.core.resource.resource_printer_base.ProjectionRequiredError: Format [value] requires a non-empty projection.
+2021-07-22 06:24:06,262 ERROR    root            (gcloud.config.list) Format [value] requires a non-empty projection.

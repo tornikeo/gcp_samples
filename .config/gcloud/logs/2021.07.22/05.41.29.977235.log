@@ -1,0 +1,41 @@
+2021-07-22 05:41:29,998 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 05:41:30,000 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local']
+2021-07-22 05:41:30,002 DEBUG    root            Running [gcloud.ai-platform.local] with arguments: [--help: "None"]
+2021-07-22 05:41:30,006 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local', 'predict']
+2021-07-22 05:41:30,010 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local', 'train']
+2021-07-22 05:41:30,013 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai_platform']
+2021-07-22 05:41:30,015 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'local']
+2021-07-22 05:41:30,018 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai_platform']
+2021-07-22 05:41:30,020 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'local']
+2021-07-22 05:41:30,025 DEBUG    root            Loaded Command Group: ['gcloud', 'help']
+2021-07-22 05:41:30,030 INFO     ___FILE_ONLY___ [m[1mNAME[m
+    gcloud ai-platform local - AI Platform Local commands
+
+[m[1mSYNOPSIS[m
+    [1mgcloud ai-platform local[m [4mCOMMAND[m [[4mGCLOUD_WIDE_FLAG ...[m]
+
+[m[1mDESCRIPTION[m
+    AI Platform Local commands.
+
+[m[1mGCLOUD WIDE FLAGS[m
+    These flags are available to all commands: --help.
+
+    Run [1m$ gcloud help[m for details.
+
+[m[1mCOMMANDS[m
+    [1m[1;4mCOMMAND[1m[m is one of the following:
+
+     [1mpredict[m
+        Run prediction locally.
+
+     [1mtrain[m
+        Run an AI Platform training job locally.
+
+[m[1mNOTES[m
+    These variants are also available:
+
+        $ gcloud alpha ai-platform local
+
+        $ gcloud beta ai-platform local
+
+[m

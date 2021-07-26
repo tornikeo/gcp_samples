@@ -1,0 +1,69 @@
+2021-07-22 05:39:58,178 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 05:39:58,179 DEBUG    root            Running [gcloud.ai-platform] with arguments: [--help: "None"]
+2021-07-22 05:39:58,180 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local']
+2021-07-22 05:39:58,181 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'models']
+2021-07-22 05:39:58,182 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'operations']
+2021-07-22 05:39:58,183 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'versions']
+2021-07-22 05:39:58,184 DEBUG    root            No implementation for release track [GA] for element: [/usr/lib/google-cloud-sdk/lib/surface/ai_platform/locations]
+2021-07-22 05:39:58,185 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'predict']
+2021-07-22 05:39:58,187 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 05:39:58,188 DEBUG    root            No implementation for release track [GA] for element: [/usr/lib/google-cloud-sdk/lib/surface/ai_platform/explain]
+2021-07-22 05:39:58,189 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai_platform']
+2021-07-22 05:39:58,190 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai_platform']
+2021-07-22 05:39:58,194 DEBUG    root            Loaded Command Group: ['gcloud', 'help']
+2021-07-22 05:39:58,199 INFO     ___FILE_ONLY___ [m[1mNAME[m
+    gcloud ai-platform - manage AI Platform jobs and models
+
+[m[1mSYNOPSIS[m
+    [1mgcloud ai-platform[m [4mGROUP[m | [4mCOMMAND[m [[4mGCLOUD_WIDE_FLAG ...[m]
+
+[m[1mDESCRIPTION[m
+    The gcloud ai-platform command group lets you manage AI Platform jobs and
+    training models.
+
+    AI Platform is a managed service that enables you to easily build machine
+    learning models, that work on any type of data, of any size. Create your
+    model with the powerful TensorFlow framework that powers many Google
+    products, from Google Photos to Google Cloud Speech.
+
+    More information on AI Platform can be found here:
+    https://cloud.google.com/ml and detailed documentation can be found here:
+    https://cloud.google.com/ml/docs/
+
+[m[1mGCLOUD WIDE FLAGS[m
+    These flags are available to all commands: --help.
+
+    Run [1m$ gcloud help[m for details.
+
+[m[1mGROUPS[m
+    [1m[1;4mGROUP[1m[m is one of the following:
+
+     [1mjobs[m
+        AI Platform Jobs commands.
+
+     [1mlocal[m
+        AI Platform Local commands.
+
+     [1mmodels[m
+        AI Platform Models commands.
+
+     [1moperations[m
+        Manage AI Platform operations.
+
+     [1mversions[m
+        AI Platform Versions commands.
+
+[m[1mCOMMANDS[m
+    [1m[1;4mCOMMAND[1m[m is one of the following:
+
+     [1mpredict[m
+        Run AI Platform online prediction.
+
+[m[1mNOTES[m
+    These variants are also available:
+
+        $ gcloud alpha ai-platform
+
+        $ gcloud beta ai-platform
+
+[m

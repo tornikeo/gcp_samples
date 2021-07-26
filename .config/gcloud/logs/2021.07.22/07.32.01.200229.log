@@ -1,0 +1,27 @@
+2021-07-22 07:32:01,215 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 07:32:01,217 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'models']
+2021-07-22 07:32:01,220 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'models', 'list']
+2021-07-22 07:32:01,226 DEBUG    root            Running [gcloud.ai-platform.models.list] with arguments: []
+2021-07-22 07:32:01,229 INFO     ___FILE_ONLY___ Using endpoint [https://us-central1-ml.googleapis.com/]
+
+2021-07-22 07:32:01,240 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:32:01,243 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:32:01,245 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:32:01,246 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:32:01,248 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 250
+2021-07-22 07:32:01,260 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:32:01,261 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:32:01,263 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:32:01,263 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:32:01,266 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 250
+2021-07-22 07:32:01,272 INFO     root            Display format: "
+        table(
+            name.basename(),
+            defaultVersion.name.basename()
+        )
+    "
+2021-07-22 07:32:01,275 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): us-central1-ml.googleapis.com:443
+2021-07-22 07:32:01,650 DEBUG    urllib3.connectionpool https://us-central1-ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/models?alt=json&pageSize=100 HTTP/1.1" 200 None
+2021-07-22 07:32:01,651 INFO     ___FILE_ONLY___ Listed 0 items.
+
+2021-07-22 07:32:01,652 DEBUG    root            SDK update checks are disabled.

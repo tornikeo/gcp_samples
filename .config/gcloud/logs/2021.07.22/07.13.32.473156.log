@@ -1,0 +1,38 @@
+2021-07-22 07:13:32,488 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 07:13:32,490 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 07:13:32,500 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'list']
+2021-07-22 07:13:32,505 DEBUG    root            Running [gcloud.ai-platform.jobs.list] with arguments: []
+2021-07-22 07:13:32,517 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:13:32,519 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:13:32,520 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:13:32,521 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:13:32,523 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 251
+2021-07-22 07:13:32,534 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-22 07:13:32,536 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-22 07:13:32,537 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-22 07:13:32,538 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-22 07:13:32,540 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 251
+2021-07-22 07:13:32,549 INFO     root            Display format: "
+        table(
+            jobId.basename(),
+            state:label=STATUS,
+            createTime.date(tz=LOCAL):label=CREATED
+         )
+    "
+2021-07-22 07:13:32,551 DEBUG    urllib3.connectionpool Starting new HTTPS connection (1): ml.googleapis.com:443
+2021-07-22 07:13:32,848 DEBUG    urllib3.connectionpool https://ml.googleapis.com:443 "GET /v1/projects/ultra-evening-318614/jobs?alt=json&pageSize=100 HTTP/1.1" 200 None
+2021-07-22 07:13:32,853 INFO     ___FILE_ONLY___ JOB_ID
+2021-07-22 07:13:32,854 INFO     ___FILE_ONLY___                 
+2021-07-22 07:13:32,854 INFO     ___FILE_ONLY___ STATUS
+2021-07-22 07:13:32,854 INFO     ___FILE_ONLY___    
+2021-07-22 07:13:32,854 INFO     ___FILE_ONLY___ CREATED
+2021-07-22 07:13:32,854 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:13:32,855 INFO     ___FILE_ONLY___ census_210722_071201
+2021-07-22 07:13:32,855 INFO     ___FILE_ONLY___   
+2021-07-22 07:13:32,855 INFO     ___FILE_ONLY___ RUNNING
+2021-07-22 07:13:32,855 INFO     ___FILE_ONLY___   
+2021-07-22 07:13:32,855 INFO     ___FILE_ONLY___ 2021-07-22T07:12:04
+2021-07-22 07:13:32,855 INFO     ___FILE_ONLY___ 
+
+2021-07-22 07:13:32,856 DEBUG    root            SDK update checks are disabled.

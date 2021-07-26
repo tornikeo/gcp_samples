@@ -1,0 +1,13 @@
+2021-07-22 07:13:40,178 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 07:13:40,179 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 07:13:40,190 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'stream_logs']
+2021-07-22 07:13:40,191 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'describe']
+2021-07-22 07:13:40,192 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit']
+2021-07-22 07:13:40,193 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'list']
+2021-07-22 07:13:40,194 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'cancel']
+2021-07-22 07:13:40,196 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'update']
+2021-07-22 07:13:40,197 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai_platform']
+2021-07-22 07:13:40,198 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'jobs']
+2021-07-22 07:13:40,199 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai_platform']
+2021-07-22 07:13:40,200 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'jobs']
+2021-07-22 07:13:40,202 ERROR    root            (gcloud.ai-platform.jobs) Invalid choice: 'census_210722_071201'.

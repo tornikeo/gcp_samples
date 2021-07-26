@@ -1,0 +1,24 @@
+2021-07-22 06:22:57,028 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2021-07-22 06:22:57,031 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'list']
+2021-07-22 06:22:57,033 DEBUG    root            Running [gcloud.config.list] with arguments: [--format: "value(core.project)", SECTION/PROPERTY: "projec"]
+2021-07-22 06:22:57,034 DEBUG    root            (gcloud.config.list) Section [core] has no property [projec].
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/properties.py", line 738, in Property
+    return self.__properties[property_name]
+KeyError: 'projec'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/config/list.py", line 99, in Run
+    return self._GetPropertiesToDisplay(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/config/list.py", line 89, in _GetPropertiesToDisplay
+    prop: properties.VALUES.Section(section).Property(prop).Get()}}
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/core/properties.py", line 741, in Property
+    s=self.__name, p=property_name))
+googlecloudsdk.core.properties.NoSuchPropertyError: Section [core] has no property [projec].
+2021-07-22 06:22:57,040 ERROR    root            (gcloud.config.list) Section [core] has no property [projec].

@@ -1,0 +1,668 @@
+2021-07-22 06:18:26,260 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2021-07-22 06:18:26,262 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'list']
+2021-07-22 06:18:26,263 DEBUG    root            Running [gcloud.config.list] with arguments: [--help: "None", SECTION/PROPERTY: "project"]
+2021-07-22 06:18:26,266 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'config']
+2021-07-22 06:18:26,268 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'config', 'list']
+2021-07-22 06:18:26,269 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'config']
+2021-07-22 06:18:26,271 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'config', 'list']
+2021-07-22 06:18:26,274 DEBUG    root            Loaded Command Group: ['gcloud', 'topic']
+2021-07-22 06:18:26,278 DEBUG    root            Loaded Command Group: ['gcloud', 'topic', 'filters']
+2021-07-22 06:18:26,283 DEBUG    root            Loaded Command Group: ['gcloud', 'help']
+2021-07-22 06:18:26,285 DEBUG    root            Loaded Command Group: ['gcloud', 'topic', 'gcloudignore']
+2021-07-22 06:18:26,287 DEBUG    root            Loaded Command Group: ['gcloud', 'topic', 'configurations']
+2021-07-22 06:18:26,288 DEBUG    root            Loaded Command Group: ['gcloud', 'auth']
+2021-07-22 06:18:26,290 DEBUG    root            Loaded Command Group: ['gcloud', 'auth', 'list']
+2021-07-22 06:18:26,308 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2021-07-22 06:18:26,310 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'backend_services']
+2021-07-22 06:18:26,312 DEBUG    root            Loaded Command Group: ['gcloud', 'components']
+2021-07-22 06:18:26,313 DEBUG    root            Loaded Command Group: ['gcloud', 'components', 'repositories']
+2021-07-22 06:18:26,314 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'regions']
+2021-07-22 06:18:26,321 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'regions', 'list']
+2021-07-22 06:18:26,323 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'zones']
+2021-07-22 06:18:26,324 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'zones', 'list']
+2021-07-22 06:18:26,326 DEBUG    root            Loaded Command Group: ['gcloud', 'topic', 'client_certificate']
+2021-07-22 06:18:26,328 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'functions']
+2021-07-22 06:18:26,329 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'functions', 'regions']
+2021-07-22 06:18:26,333 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'functions', 'regions', 'list']
+2021-07-22 06:18:26,360 INFO     ___FILE_ONLY___ [m[1mNAME[m
+    gcloud config list - list Cloud SDK properties for the currently active
+        configuration
+
+[m[1mSYNOPSIS[m
+    [1mgcloud config list[m [[4mSECTION[m/[4mPROPERTY[m] [[1m--all[m] [[1m--filter[m=[4mEXPRESSION[m]
+        [[1m--limit[m=[4mLIMIT[m] [[1m--sort-by[m=[[4mFIELD[m,...]] [[4mGCLOUD_WIDE_FLAG ...[m]
+
+[m[1mDESCRIPTION[m
+    gcloud config list lists all properties of the active configuration. These
+    include the account used to authorize access to the Cloud Platform, the
+    current Cloud Platform project, and the default Compute Engine region and
+    zone, if set. See [1mgcloud topic configurations[m for more about
+    configurations.
+
+[m[1mEXAMPLES[m
+    To list the project property in the core section, run:
+
+        $ gcloud config list project
+
+    To list the zone property in the compute section, run:
+
+        $ gcloud config list compute/zone
+
+    To list all the properties, run:
+
+        $ gcloud config list --all
+
+    Note, you cannot specify both --all and a property name.
+
+[m[1mPOSITIONAL ARGUMENTS[m
+     [[4mSECTION[m/[4mPROPERTY[m]
+        Property to be listed. Note that SECTION/ is optional while referring
+        to properties in the core section.
+
+[m[1mFLAGS[m
+     [1m--all[m
+        List all set and unset properties that match the arguments.
+
+[m[1mLIST COMMAND FLAGS[m
+     [1m--filter[m=[4mEXPRESSION[m
+        Apply a Boolean filter [4mEXPRESSION[m to each resource item to be listed.
+        If the expression evaluates [1mTrue[m, then that item is listed. For more
+        details and examples of filter expressions, run $ gcloud topic filters.
+        This flag interacts with other flags that are applied in this order:
+        [1m--flatten[m, [1m--sort-by[m, [1m--filter[m, [1m--limit[m.
+
+     [1m--limit[m=[4mLIMIT[m
+        Maximum number of resources to list. The default is [1munlimited[m. This
+        flag interacts with other flags that are applied in this order:
+        [1m--flatten[m, [1m--sort-by[m, [1m--filter[m, [1m--limit[m.
+
+     [1m--sort-by[m=[[4mFIELD[m,...]
+        Comma-separated list of resource field key names to sort by. The
+        default order is ascending. Prefix a field with ``~'' for descending
+        order on that field. This flag interacts with other flags that are
+        applied in this order: [1m--flatten[m, [1m--sort-by[m, [1m--filter[m, [1m--limit[m.
+
+[m[1mGCLOUD WIDE FLAGS[m
+    These flags are available to all commands: --account, --billing-project,
+    --configuration, --flags-file, --flatten, --format, --help,
+    --impersonate-service-account, --log-http, --project, --quiet,
+    --trace-token, --user-output-enabled, --verbosity.
+
+    Run [1m$ gcloud help[m for details.
+
+[m[1mAVAILABLE PROPERTIES[m
+     [4mcore[m
+         [1maccount[m
+            Account [1mgcloud[m should use for authentication. Run [1mgcloud auth list[m
+            to see your currently available accounts.
+
+         [1mcustom_ca_certs_file[m
+            Absolute path to a custom CA cert file.
+
+         [1mdefault_regional_backend_service[m
+            If True, backend services in [1mgcloud compute backend-services[m will
+            be regional by default. Setting the [1m--global[m flag is required for
+            global backend services.
+
+         [1mdisable_color[m
+            If True, color will not be used when printing messages in the
+            terminal.
+
+         [1mdisable_file_logging[m
+            If True, [1mgcloud[m will not store logs to a file. This may be useful
+            if disk space is limited.
+
+         [1mdisable_prompts[m
+            If True, the default answer will be assumed for all user prompts.
+            However, for any prompts that require user input, an error will be
+            raised. This is equivalent to either using the global [1m--quiet[m flag
+            or setting the environment variable [1mCLOUDSDK_CORE_DISABLE_PROMPTS[m
+            to 1. Setting this property is useful when scripting with [1mgcloud[m.
+
+         [1mdisable_usage_reporting[m
+            If True, anonymous statistics on SDK usage will not be collected.
+            This value is set by default based on your choices during
+            installation, but can be changed at any time. For more information,
+            see: https://cloud.google.com/sdk/usage-statistics
+
+         [1mlog_http[m
+            If True, log HTTP requests and responses to the logs. To see logs
+            in the terminal, adjust [1mverbosity[m settings. Otherwise, logs are
+            available in their respective log files.
+
+         [1mmax_log_days[m
+            Maximum number of days to retain log files before deleting. If set
+            to 0, turns off log garbage collection and does not delete log
+            files. If unset, the default is 30 days.
+
+         [1mpass_credentials_to_gsutil[m
+            If True, pass the configured Cloud SDK authentication to gsutil.
+
+         [1mproject[m
+            Project ID of the Cloud Platform project to operate on by default.
+            This can be overridden by using the global [1m--project[m flag.
+
+         [1mshow_structured_logs[m
+                Control when JSON-structured log messages for the current verbosity
+                level (and above) will be written to standard error. If this property
+                is disabled, logs are formatted as `text` by default.
+
+                Valid values are:
+                    *   `never` - Log messages as text
+                    *   `always` - Always log messages as JSON
+                    *   `log` - Only log messages as JSON if stderr is a file
+                    *    `terminal` - Only log messages as JSON if stderr is a terminal
+
+                If unset, default is `never`.
+
+         [1mtrace_token[m
+            Token used to route traces of service requests for investigation of
+            issues. This token will be provided by Google support.
+
+         [1muser_output_enabled[m
+            True, by default. If False, messages to the user and command output
+            on both standard output and standard error will be suppressed.
+
+         [1mverbosity[m
+            Default logging verbosity for [1mgcloud[m commands. This is the
+            equivalent of using the global [1m--verbosity[m flag. Supported
+            verbosity levels: [1mdebug[m, [1minfo[m, [1mwarning[m, [1merror[m, [1mcritical[m, and [1mnone[m.
+
+     [4maccessibility[m
+         [1mscreen_reader[m
+            Make gcloud more screen reader friendly.
+
+     [4mai[m
+         [1mregion[m
+            Default region to use when working with AI Platform resources. When
+            a [1m--region[m flag is required but not provided, the command will fall
+            back to this value, if set.
+
+     [4mai_platform[m
+         [1mregion[m
+            Default region to use when working with AI Platform Training and
+            Prediction resources (currently for Prediction only). It is ignored
+            for training resources for now. The value should be either [1mglobal[m
+            or one of the supported regions. When a [1m--region[m flag is required
+            but not provided, the command will fall back to this value, if set.
+
+     [4mapp[m
+         [1mcloud_build_timeout[m
+            Timeout, in seconds, to wait for Docker builds to complete during
+            deployments. All Docker builds now use the Cloud Build API.
+
+         [1mpromote_by_default[m
+            If True, when deploying a new version of a service, that version
+            will be promoted to receive all traffic for the service. This
+            property can be overridden via the [1m--promote-by-default[m or
+            [1m--no-promote-by-default[m flags.
+
+         [1mstop_previous_version[m
+            If True, when deploying a new version of a service, the previously
+            deployed version is stopped. If False, older versions must be
+            stopped manually.
+
+         [1muse_runtime_builders[m
+            If set, opt in/out to a new code path for building applications
+            using pre-fabricated runtimes that can be updated independently of
+            client tooling. If not set, the default path for each runtime is
+            used.
+
+     [4martifacts[m
+         [1mlocation[m
+            Default location to use when working with Artifact Registry
+            resources. When a [1mlocation[m value is required but not provided, the
+            command will fall back to this value, if set. If this value is
+            unset, the default location is [1mglobal[m when [1mlocation[m value is
+            optional.
+
+         [1mrepository[m
+            Default repository to use when working with Artifact Registry
+            resources. When a [1mrepository[m value is required but not provided,
+            the command will fall back to this value, if set.
+
+     [4mauth[m
+         [1mdisable_credentials[m
+            If True, [1mgcloud[m will not attempt to load any credentials or
+            authenticate any requests. This is useful when behind a proxy that
+            adds authentication to requests.
+
+         [1mimpersonate_service_account[m
+            After setting this property, all API requests will be made as the
+            given service account instead of the currently selected account.
+            This is done without needing to create, download, and activate a
+            key for the account. In order to perform operations as the service
+            account, your currently selected account must have an IAM role that
+            includes the iam.serviceAccounts.getAccessToken permission for the
+            service account. The roles/iam.serviceAccountTokenCreator role has
+            this permission or you may create a custom role. A list of service
+            accounts, separated with comma, can be specified. In such cases, it
+            creates an impersonation delegation chain. Any given service
+            account in the list must have the
+            roles/iam.serviceAccountTokenCreator role on its subsequent service
+            account. For example, when
+            --impersonate-service-account=sv1@developer.gserviceaccount.com,sv2@developer.gserviceaccount.com,
+            the active account must have the
+            roles/iam.serviceAccountTokenCreator role on
+            sv1@developer.gserviceaccount.com which must has the
+            roles/iam.serviceAccountTokenCreator role on
+            sv2@developer.gserviceaccount.com.
+            sv2@developer.gserviceaccount.com is target impersonated service
+            account and sv1@developer.gserviceaccount.com is the delegate.
+
+     [4mbilling[m
+         [1mquota_project[m
+                Project that will be charged quota for the
+                operations performed in `gcloud`. When unset, the default is
+                [CURRENT_PROJECT]; this will charge quota against the currently set
+                project for operations performed on it. Additionally, some existing
+                APIs will continue to use a shared project for quota by default, when
+                this property is unset.
+
+                If you need to operate on one project, but
+                need quota against a different project, you can use this property to
+                specify the alternate project.
+
+     [4mbuilds[m
+         [1mkaniko_cache_ttl[m
+            TTL, in hours, of cached layers when using Kaniko. If zero, layer
+            caching is disabled.
+
+         [1mtimeout[m
+            Timeout, in seconds, to wait for builds to complete. If unset,
+            defaults to 10 minutes.
+
+         [1muse_kaniko[m
+            If True, kaniko will be used to build images described by a
+            Dockerfile, instead of [1mdocker build[m.
+
+     [4mcomponent_manager[m
+         [1madditional_repositories[m
+            Comma separated list of additional repositories to check for
+            components. This property is automatically managed by the [1mgcloud
+            components repositories[m commands.
+
+         [1mdisable_update_check[m
+            If True, Cloud SDK will not automatically check for updates.
+
+     [4mcomposer[m
+         [1mlocation[m
+            Composer location to use. Each Composer location constitutes an
+            independent resource namespace constrained to deploying
+            environments into Compute Engine regions inside this location. This
+            parameter corresponds to the /locations/<location> segment of the
+            Composer resource URIs being referenced.
+
+     [4mcompute[m
+         [1mregion[m
+            Default region to use when working with regional Compute Engine
+            resources. When a [1m--region[m flag is required but not provided, the
+            command will fall back to this value, if set. To see valid choices,
+            run [1mgcloud compute regions list[m.
+
+         [1muse_new_list_usable_subnets_api[m
+            If True, use the new API for listing usable subnets which only
+            returns subnets in the current project.
+
+         [1mzone[m
+            Default zone to use when working with zonal Compute Engine
+            resources. When a [1m--zone[m flag is required but not provided, the
+            command will fall back to this value, if set. To see valid choices,
+            run [1mgcloud compute zones list[m.
+
+     [4mcontainer[m
+         [1mbuild_timeout[m
+            Timeout, in seconds, to wait for container builds to complete.
+
+         [1mcluster[m
+            Name of the cluster to use by default when working with Kubernetes
+            Engine.
+
+         [1muse_application_default_credentials[m
+            If True, use application default credentials to authenticate to the
+            cluster API server.
+
+         [1muse_client_certificate[m
+            If True, use the cluster's client certificate to authenticate to
+            the cluster API server.
+
+     [4mcontext_aware[m
+         [1muse_client_certificate[m
+            If True, use client certificate to authorize user device using
+            Context-aware access. Some services may not support client
+            certificate authorization. If a command sends requests to such
+            services, the client certificate will not be validated. Run [1mgcloud
+            topic client-certificate[m for list of services supporting this
+            feature.
+
+     [4mdataflow[m
+         [1mdisable_public_ips[m
+            Specifies that Cloud Dataflow workers must not use public IP
+            addresses.
+
+         [1menable_streaming_engine[m
+            Set this to true to enable Streaming Engine for the job.
+
+         [1mprint_only[m
+            Prints the container spec to stdout. Does not save in Google Cloud
+            Storage.
+
+     [4mdatafusion[m
+         [1mlocation[m
+            Datafusion location to use. Each Datafusion location constitutes an
+            independent resource namespace constrained to deploying
+            environments into Compute Engine regions inside this location. This
+            parameter corresponds to the /locations/<location> segment of the
+            Datafusion resource URIs being referenced.
+
+     [4mdataproc[m
+         [1mregion[m
+            Cloud Dataproc region to use. Each Cloud Dataproc region
+            constitutes an independent resource namespace constrained to
+            deploying instances into Compute Engine zones inside the region.
+
+     [4mdeploy[m
+         [1mdelivery_pipeline[m
+            Delivery Pipeline being managed by Cloud Deploy.
+
+         [1mregion[m
+            Cloud Deploy region to use. Each Cloud Deploy region constitutes an
+            independent resource namespace constrained to deploying instances
+            into Compute Engine zones inside the region.
+
+     [4mdeployment_manager[m
+         [1mglob_imports[m
+            Enable import path globbing. Uses glob patterns to match multiple
+            imports in a config file.
+
+     [4meventarc[m
+         [1mlocation[m
+            The default location to use when working with Eventarc resources.
+            This should be either [1m[1;4mglobal[1m[m or one of the supported regions. When
+            a [1m--location[m flag is required but not provided, the command will
+            fall back to this value, if set.
+
+     [4mfilestore[m
+         [1mlocation[m
+            Please use the [1m--location[m flag or set the filestore/zone or
+            filestore/region property.
+
+         [1mregion[m
+            Default region to use when working with Cloud Filestore regions.
+            When a [1m--region[m flag is required but not provided, the command will
+            fall back to this value, if set.
+
+         [1mzone[m
+            Default zone to use when working with Cloud Filestore zones. When a
+            [1m--zone[m flag is required but not provided, the command will fall
+            back to this value, if set.
+
+     [4mfunctions[m
+         [1mregion[m
+            Default region to use when working with Cloud Functions resources.
+            When a [1m--region[m flag is required but not provided, the command will
+            fall back to this value, if set. To see valid choices, run [1mgcloud
+            beta functions regions list[m.
+
+         [1mv2[m
+            Default product version to use when working with Cloud Functions
+            resources. When neither [1m--v2[m nor [1m--no-v2[m is provided, the decision
+            of whether to use V2 falls back to this value.
+
+     [4mgame_services[m
+         [1mdefault_deployment[m
+            Default deployment to use when working with Cloud Game Services
+            list configs. When a --deployment flag is required in a list
+            command but not provided, the command will fall back to this value
+            which envokes aggregated list from the backend.
+
+         [1mdefault_realm[m
+            Default realm to use when working with Cloud Game Services list
+            clusters. When a --realm flag is required in a list command but not
+            provided, the command will fall back to this value which envokes
+            aggregated list from the backend.
+
+         [1mlocation[m
+            Default location to use when working with Cloud Game Services
+            resources. When a [1m--location[m flag is required but not provided, the
+            command will fall back to this value.
+
+     [4mgcloudignore[m
+         [1menabled[m
+            If True, do not upload [1m.gcloudignore[m files (see [1m$ gcloud topic
+            gcloudignore[m). If False, turn off the gcloudignore mechanism
+            entirely and upload all files.
+
+     [4mgkebackup[m
+         [1mbackup[m
+            Default backup ID to use when working with Backup for GKE Services
+            resources. When a [1m--backup[m flag is required but not provided, the
+            command will fall back to this value.
+
+         [1mbackup_plan[m
+            Default backup plan ID to use when working with Backup for GKE
+            Services resources. When a [1m--backup-plan[m flag is required but not
+            provided, the command will fall back to this value.
+
+         [1mlocation[m
+            Default location to use when working with Backup for GKE Services
+            resources. When a [1m--location[m flag is required but not provided, the
+            command will fall back to this value.
+
+         [1mrestore[m
+            Default restore ID to use when working with Backup for GKE Services
+            resources. When a [1m--restore[m flag is required but not provided, the
+            command will fall back to this value.
+
+     [4mhealthcare[m
+         [1mdataset[m
+            Default dataset to use when working with Cloud Healthcare
+            resources. When a [1m--dataset[m flag is required but not provided, the
+            command will fall back to this value, if set.
+
+         [1mlocation[m
+            Default location to use when working with Cloud Healthcare
+            resources. When a [1m--location[m flag is required but not provided, the
+            command will fall back to this value.
+
+     [4minteractive[m
+         [1mbottom_bindings_line[m
+            If True, display the bottom key bindings line.
+
+         [1mbottom_status_line[m
+            If True, display the bottom status line.
+
+         [1mcompletion_menu_lines[m
+            Number of lines in the completion menu.
+
+         [1mcontext[m
+            Command context string.
+
+         [1mfixed_prompt_position[m
+            If True, display the prompt at the same position.
+
+         [1mhelp_lines[m
+            Maximum number of help snippet lines.
+
+         [1mhidden[m
+            If True, expose hidden commands/flags.
+
+         [1mjustify_bottom_lines[m
+            If True, left- and right-justify bottom toolbar lines.
+
+         [1mmanpage_generator[m
+            If True, use the manpage CLI tree generator for unsupported
+            commands.
+
+         [1mmulti_column_completion_menu[m
+            If True, display the completions as a multi-column menu.
+
+         [1mprompt[m
+            Command prompt string.
+
+         [1mshow_help[m
+            If True, show help as command args are being entered.
+
+         [1msuggest[m
+            If True, add command line suggestions based on history.
+
+     [4mlifesciences[m
+         [1mlocation[m
+            Default location to use when working with Cloud Life Sciences
+            resources. When a [1m--location[m flag is required but not provided, the
+            command will fall back to this value.
+
+     [4mmedia_asset[m
+         [1mlocation[m
+            Default location to use when working with Cloud Media Asset
+            resources. When a [1m--location[m flag is required but not provided, the
+            command will fall back to this value.
+
+     [4mmemcache[m
+         [1mregion[m
+            Default region to use when working with Cloud Memorystore for
+            Memcached resources. When a [1mregion[m is required but not provided by
+            a flag, the command will fall back to this value, if set.
+
+     [4mmetastore[m
+         [1mlocation[m
+            Default location to use when working with Dataproc Metastore. When
+            a [1mlocation[m is required but not provided by a flag, the command will
+            fall back to this value, if set.
+
+         [1mtier[m
+                Default tier to use when creating Dataproc Metastore services.
+                When a `tier` is required but not provided by a flag,
+                the command will fall back to this value, if set.
+
+                Valid values are:
+                    *   `developer` - The developer tier provides limited scalability
+                    and no fault tolerance. Good for low-cost proof-of-concept.
+                    *   `enterprise` - The enterprise tier provides multi-zone high
+                    availability, and sufficient scalability for enterprise-level
+                    Dataproc Metastore workloads.
+
+     [4mml_engine[m
+         [1mlocal_python[m
+            Full path to the Python interpreter to use for Cloud ML Engine
+            local predict/train jobs. If not specified, the default path is the
+            one to the Python interpreter found on system [1mPATH[m.
+
+         [1mpolling_interval[m
+            Interval (in seconds) at which to poll logs from your Cloud ML
+            Engine jobs. Note that making it much faster than the default (60)
+            will quickly use all of your quota.
+
+     [4mnotebooks[m
+         [1mlocation[m
+            Default location to use when working with Notebook resources. When
+            a [1mlocation[m value is required but not provided, the command will
+            fall back to this value, if set.
+
+     [4mprivateca[m
+         [1mlocation[m
+            Default location to use when working with Private CA resources.
+            When a [1m--location[m flag is required but not provided, the command
+            will fall back to this value, if set.
+
+     [4mproxy[m
+         [1maddress[m
+            Hostname or IP address of proxy server.
+
+         [1mpassword[m
+            Password to use when connecting, if the proxy requires
+            authentication.
+
+         [1mport[m
+            Port to use when connected to the proxy server.
+
+         [1mrdns[m
+            If True, DNS queries will not be performed locally, and instead,
+            handed to the proxy to resolve. This is default behavior.
+
+         [1mtype[m
+            Type of proxy being used. Supported proxy types are: [http,
+            http_no_tunnel, socks4, socks5].
+
+         [1musername[m
+            Username to use when connecting, if the proxy requires
+            authentication.
+
+     [4mredis[m
+         [1mregion[m
+            Default region to use when working with Cloud Memorystore for Redis
+            resources. When a [1mregion[m is required but not provided by a flag,
+            the command will fall back to this value, if set.
+
+     [4mrun[m
+         [1mcluster[m
+            ID of the cluster or fully qualified identifier for the cluster
+
+         [1mcluster_location[m
+            Zone or region in which the cluster is located.
+
+         [1mplatform[m
+            Target platform for running commands.
+
+         [1mregion[m
+            Default region to use when working with Cloud Run resources. When a
+            [1m--region[m flag is required but not provided, the command will fall
+            back to this value, if set.
+
+     [4mscc[m
+         [1morganization[m
+            Default organization [1mgcloud[m should use for scc surface.
+
+         [1mparent[m
+            Default parent [1mgcloud[m should use for scc surface.
+
+     [4msecrets[m
+         [1mlocations[m
+            A comma separated list of the locations to replicate secrets to.
+            Only applies to secrets with a user-managed policy.
+
+         [1mreplication-policy[m
+            The type of replication policy to apply to secrets. Allowed values
+            are "automatic" and "user-managed". If user-managed then locations
+            must also be provided.
+
+     [4mspanner[m
+         [1minstance[m
+            Default instance to use when working with Cloud Spanner resources.
+            When an instance is required but not provided by a flag, the
+            command will fall back to this value, if set.
+
+     [4mssh[m
+         [1mputty_force_connect[m
+            Whether or not [1mgcloud[m should automatically accept new or changed
+            host keys when executing plink/pscp commands on Windows. Defaults
+            to True, but can be set to False to present these interactive
+            prompts to the user for host key checking.
+
+         [1mverify_internal_ip[m
+            Whether or not [1mgcloud[m should perform an initial SSH connection to
+            verify an instance ID is correct when connecting via its internal
+            IP. Without this check, [1mgcloud[m will simply connect to the internal
+            IP of the desired instance, which may be wrong if the desired
+            instance is in a different subnet but happens to share the same
+            internal IP as an instance in the current subnet. Defaults to True.
+
+     [4msurvey[m
+         [1mdisable_prompts[m
+            If True, gcloud will not prompt you to take periodic usage
+            experience surveys.
+
+     [4mvmware[m
+         [1mregion[m
+            Default region to use when working with VMware Engine resources.
+            When a [1m--region[m flag is required but not provided, the command will
+            fall back to this value, if set.
+
+[m[1mNOTES[m
+    These variants are also available:
+
+        $ gcloud alpha config list
+
+        $ gcloud beta config list
+
+[m

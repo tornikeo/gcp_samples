@@ -1,0 +1,426 @@
+2021-07-22 06:39:06,002 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 06:39:06,004 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 06:39:06,005 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit']
+2021-07-22 06:39:06,019 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit', 'training']
+2021-07-22 06:39:06,040 DEBUG    root            Running [gcloud.ai-platform.jobs.submit.training] with arguments: [--help: "None"]
+2021-07-22 06:39:06,044 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai_platform']
+2021-07-22 06:39:06,046 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'jobs']
+2021-07-22 06:39:06,047 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'jobs', 'submit']
+2021-07-22 06:39:06,048 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'jobs', 'submit', 'training']
+2021-07-22 06:39:06,061 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai_platform']
+2021-07-22 06:39:06,062 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'jobs']
+2021-07-22 06:39:06,063 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'jobs', 'submit']
+2021-07-22 06:39:06,064 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'jobs', 'submit', 'training']
+2021-07-22 06:39:06,079 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2021-07-22 06:39:06,094 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'set']
+2021-07-22 06:39:06,096 DEBUG    root            Loaded Command Group: ['gcloud', 'compute']
+2021-07-22 06:39:06,098 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'regions']
+2021-07-22 06:39:06,099 DEBUG    root            Loaded Command Group: ['gcloud', 'compute', 'regions', 'list']
+2021-07-22 06:39:06,101 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'unset']
+2021-07-22 06:39:06,103 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'cancel']
+2021-07-22 06:39:06,106 DEBUG    root            Loaded Command Group: ['gcloud', 'help']
+2021-07-22 06:39:06,129 INFO     ___FILE_ONLY___ [m[1mNAME[m
+    gcloud ai-platform jobs submit training - submit an AI Platform training
+        job
+
+[m[1mSYNOPSIS[m
+    [1mgcloud ai-platform jobs submit training[m [4mJOB[m [[1m--config[m=[4mCONFIG[m]
+        [[1m--job-dir[m=[4mJOB_DIR[m] [[1m--labels[m=[[4mKEY[m=[4mVALUE[m,...]]
+        [[1m--master-accelerator[m=[[4mcount[m=[4mCOUNT[m],[[4mtype[m=[4mTYPE[m]]
+        [[1m--master-image-uri[m=[4mMASTER_IMAGE_URI[m]
+        [[1m--master-machine-type[m=[4mMASTER_MACHINE_TYPE[m] [[1m--module-name[m=[4mMODULE_NAME[m]
+        [[1m--package-path[m=[4mPACKAGE_PATH[m] [[1m--packages[m=[[4mPACKAGE[m,...]]
+        [[1m--parameter-server-accelerator[m=[[4mcount[m=[4mCOUNT[m],[[4mtype[m=[4mTYPE[m]]
+        [[1m--parameter-server-image-uri[m=[4mPARAMETER_SERVER_IMAGE_URI[m]
+        [[1m--python-version[m=[4mPYTHON_VERSION[m] [[1m--region[m=[4mREGION[m]
+        [[1m--runtime-version[m=[4mRUNTIME_VERSION[m] [[1m--scale-tier[m=[4mSCALE_TIER[m]
+        [[1m--service-account[m=[4mSERVICE_ACCOUNT[m] [[1m--staging-bucket[m=[4mSTAGING_BUCKET[m]
+        [[1m--use-chief-in-tf-config[m=[4mUSE_CHIEF_IN_TF_CONFIG[m]
+        [[1m--worker-accelerator[m=[[4mcount[m=[4mCOUNT[m],[[4mtype[m=[4mTYPE[m]]
+        [[1m--worker-image-uri[m=[4mWORKER_IMAGE_URI[m] [[1m--async[m | [1m--stream-logs[m]
+        [[1m--kms-key[m=[4mKMS_KEY[m : [1m--kms-keyring[m=[4mKMS_KEYRING[m
+          [1m--kms-location[m=[4mKMS_LOCATION[m [1m--kms-project[m=[4mKMS_PROJECT[m]
+        [[1m--parameter-server-count[m=[4mPARAMETER_SERVER_COUNT[m
+          [1m--parameter-server-machine-type[m=[4mPARAMETER_SERVER_MACHINE_TYPE[m]
+        [[1m--worker-count[m=[4mWORKER_COUNT[m [1m--worker-machine-type[m=[4mWORKER_MACHINE_TYPE[m]
+        [[4mGCLOUD_WIDE_FLAG ...[m] [-- [4mUSER_ARGS[m ...]
+
+[m[1mDESCRIPTION[m
+    Submit an AI Platform training job.
+
+    This creates temporary files and executes Python code staged by a user on
+    Cloud Storage. Model code can either be specified with a path, e.g.:
+
+        $ gcloud ai-platform jobs submit training my_job \
+                --module-name trainer.task \
+                --staging-bucket gs://my-bucket \
+                --package-path /my/code/path/trainer \
+                --packages additional-dep1.tar.gz,dep2.whl
+
+    Or by specifying an already built package:
+
+        $ gcloud ai-platform jobs submit training my_job \
+                --module-name trainer.task \
+                --staging-bucket gs://my-bucket \
+                --packages trainer-0.0.1.tar.gz,additional-dep1.tar.gz,dep2.whl
+
+    If [1m--package-path=/my/code/path/trainer[m is specified and there is a
+    [1msetup.py[m file at [1m/my/code/path/setup.py[m, the setup file will be invoked
+    with [1msdist[m and the generated tar files will be uploaded to Cloud Storage.
+    Otherwise, a temporary [1msetup.py[m file will be generated for the build.
+
+    By default, this command runs asynchronously; it exits once the job is
+    successfully submitted.
+
+    To follow the progress of your job, pass the [1m--stream-logs[m flag (note that
+    even with the [1m--stream-logs[m flag, the job will continue to run after this
+    command exits and must be cancelled with [1mgcloud ai-platform jobs cancel
+    JOB_ID[m).
+
+    For more information, see:
+    https://cloud.google.com/ai-platform/training/docs/overview
+
+[m[1mPOSITIONAL ARGUMENTS[m
+     [4mJOB[m
+        Name of the job.
+
+     [-- [4mUSER_ARGS[m ...]
+        Additional user arguments to be forwarded to user code
+
+        The '--' argument must be specified between gcloud specific args on the
+        left and USER_ARGS on the right.
+
+[m[1mFLAGS[m
+     [1m--config[m=[4mCONFIG[m
+        Path to the job configuration file. This file should be a YAML document
+        (JSON also accepted) containing a Job resource as defined in the API
+        (all fields are optional):
+        https://cloud.google.com/ml/reference/rest/v1/projects.jobs
+
+        EXAMPLES:
+
+        JSON:
+
+            {
+              "jobId": "my_job",
+              "labels": {
+                "type": "prod",
+                "owner": "alice"
+              },
+              "trainingInput": {
+                "scaleTier": "BASIC",
+                "packageUris": [
+                  "gs://my/package/path"
+                ],
+                "region": "us-east1"
+              }
+            }
+
+        YAML:
+
+            jobId: my_job
+            labels:
+              type: prod
+              owner: alice
+            trainingInput:
+              scaleTier: BASIC
+              packageUris:
+              - gs://my/package/path
+              region: us-east1
+
+    If an option is specified both in the configuration file **and** via
+    command line arguments, the command line arguments override the
+    configuration file.
+
+     [1m--job-dir[m=[4mJOB_DIR[m
+        Cloud Storage path in which to store training outputs and other data
+        needed for training.
+
+        This path will be passed to your TensorFlow program as the [1m--job-dir[m
+        command-line arg. The benefit of specifying this field is that AI
+        Platform will validate the path for use in training. However, note that
+        your training program will need to parse the provided [1m--job-dir[m
+        argument.
+
+        If packages must be uploaded and [1m--staging-bucket[m is not provided, this
+        path will be used instead.
+
+     [1m--labels[m=[[4mKEY[m=[4mVALUE[m,...]
+        List of label KEY=VALUE pairs to add.
+
+        Keys must start with a lowercase character and contain only hyphens
+        ([1m-[m), underscores ([1m_[m), lowercase characters, and numbers. Values must
+        contain only hyphens ([1m-[m), underscores ([1m_[m), lowercase characters, and
+        numbers.
+
+     [1m--master-accelerator[m=[[4mcount[m=[4mCOUNT[m],[[4mtype[m=[4mTYPE[m]
+        Hardware accelerator config for the master worker. Must specify both
+        the accelerator type (TYPE) for each server and the number of
+        accelerators to attach to each server (COUNT).
+
+         [1mtype[m
+            Type of the accelerator. Choices are
+            nvidia-tesla-a100,nvidia-tesla-k80,nvidia-tesla-p100,nvidia-tesla-p4,nvidia-tesla-t4,nvidia-tesla-v100,tpu-v2,tpu-v2-pod,tpu-v3,tpu-v3-pod
+
+         [1mcount[m
+            Number of accelerators to attach to each machine running the job.
+            Must be greater than 0.
+
+     [1m--master-image-uri[m=[4mMASTER_IMAGE_URI[m
+        Docker image to run on each master worker. This image must be in
+        Container Registry. Only one of [1m--master-image-uri[m and
+        [1m--runtime-version[m must be specified.
+
+     [1m--master-machine-type[m=[4mMASTER_MACHINE_TYPE[m
+        Specifies the type of virtual machine to use for training job's master
+        worker.
+
+        You must set this value when [1m--scale-tier[m is set to [1mCUSTOM[m.
+
+     [1m--module-name[m=[4mMODULE_NAME[m
+        Name of the module to run.
+
+     [1m--package-path[m=[4mPACKAGE_PATH[m
+        Path to a Python package to build. This should point to a [1mlocal[m
+        directory containing the Python source for the job. It will be built
+        using [1msetuptools[m (which must be installed) using its [1mparent[m directory
+        as context. If the parent directory contains a [1msetup.py[m file, the build
+        will use that; otherwise, it will use a simple built-in one.
+
+     [1m--packages[m=[[4mPACKAGE[m,...]
+        Path to Python archives used for training. These can be local paths
+        (absolute or relative), in which case they will be uploaded to the
+        Cloud Storage bucket given by [1m--staging-bucket[m, or Cloud Storage URLs
+        ('gs://bucket-name/path/to/package.tar.gz').
+
+     [1m--parameter-server-accelerator[m=[[4mcount[m=[4mCOUNT[m],[[4mtype[m=[4mTYPE[m]
+        Hardware accelerator config for the parameter servers. Must specify
+        both the accelerator type (TYPE) for each server and the number of
+        accelerators to attach to each server (COUNT).
+
+         [1mtype[m
+            Type of the accelerator. Choices are
+            nvidia-tesla-a100,nvidia-tesla-k80,nvidia-tesla-p100,nvidia-tesla-p4,nvidia-tesla-t4,nvidia-tesla-v100,tpu-v2,tpu-v2-pod,tpu-v3,tpu-v3-pod
+
+         [1mcount[m
+            Number of accelerators to attach to each machine running the job.
+            Must be greater than 0.
+
+     [1m--parameter-server-image-uri[m=[4mPARAMETER_SERVER_IMAGE_URI[m
+        Docker image to run on each parameter server. This image must be in
+        Container Registry. If not specified, the value of [1m--master-image-uri[m
+        is used.
+
+     [1m--python-version[m=[4mPYTHON_VERSION[m
+        Version of Python used during training. Choices are 3.7, 3.5, and 2.7.
+        However, this value must be compatible with the chosen runtime version
+        for the job.
+
+        Must be used with a compatible runtime version:
+
+        ◆ 3.7 is compatible with runtime versions 1.15 and later.
+        ◆ 3.5 is compatible with runtime versions 1.4 through 1.14.
+        ◆ 2.7 is compatible with runtime versions 1.15 and earlier.
+
+     [1m--region[m=[4mREGION[m
+        Region of the machine learning training job to submit. If not
+        specified, you may be prompted to select a region (interactive mode
+        only).
+
+        To avoid prompting when this flag is omitted, you can set the
+        [1m[1;4mcompute/region[1m[m property:
+
+            $ gcloud config set compute/region REGION
+
+        A list of regions can be fetched by running:
+
+            $ gcloud compute regions list
+
+        To unset the property, run:
+
+            $ gcloud config unset compute/region
+
+        Alternatively, the region can be stored in the environment variable
+        [1m[1;4mCLOUDSDK_COMPUTE_REGION[1m[m.
+
+     [1m--runtime-version[m=[4mRUNTIME_VERSION[m
+        AI Platform runtime version for this job. Must be specified unless
+        --master-image-uri is specified instead. It is defined in documentation
+        along with the list of supported versions:
+        https://cloud.google.com/ai-platform/prediction/docs/runtime-version-list
+
+     [1m--scale-tier[m=[4mSCALE_TIER[m
+        Specify the machine types, the number of replicas for workers, and
+        parameter servers. [4mSCALE_TIER[m must be one of:
+
+         [1mbasic[m
+            Single worker instance. This tier is suitable for learning how to
+            use AI Platform, and for experimenting with new models using small
+            datasets.
+         [1mbasic-gpu[m
+            Single worker instance with a GPU.
+         [1mbasic-tpu[m
+            Single worker instance with a Cloud TPU.
+         [1mcustom[m
+            CUSTOM tier is not a set tier, but rather enables you to use your
+            own cluster specification. When you use this tier, set values to
+            configure your processing cluster according to these guidelines
+            (using the [1m--config[m flag):
+
+            ▸ You [4mmust[m set [1mTrainingInput.masterType[m to specify the type of
+              machine to use for your master node. This is the only required
+              setting.
+            ▸ You [4mmay[m set [1mTrainingInput.workerCount[m to specify the number of
+              workers to use. If you specify one or more workers, you [4mmust[m also
+              set [1mTrainingInput.workerType[m to specify the type of machine to
+              use for your worker nodes.
+            ▸ You [4mmay[m set [1mTrainingInput.parameterServerCount[m to specify the
+              number of parameter servers to use. If you specify one or more
+              parameter servers, you [4mmust[m also set
+              [1mTrainingInput.parameterServerType[m to specify the type of machine
+              to use for your parameter servers. Note that all of your workers
+              must use the same machine type, which can be different from your
+              parameter server type and master type. Your parameter servers
+              must likewise use the same machine type, which can be different
+              from your worker type and master type.
+         [1mpremium-1[m
+            Large number of workers with many parameter servers.
+         [1mstandard-1[m
+            Many workers and a few parameter servers.
+
+     [1m--service-account[m=[4mSERVICE_ACCOUNT[m
+        The email address of a service account to use when running the training
+        appplication. You must have the [1miam.serviceAccounts.actAs[m permission
+        for the specified service account. In addition, the AI Platform
+        Training Google-managed service account must have the
+        [1mroles/iam.serviceAccountAdmin[m role for the specified service account.
+        Learn more about configuring a service account.
+        (https://cloud.google.com/ai-platform/training/docs/custom-service-account)
+        If not specified, the AI Platform Training Google-managed service
+        account is used by default.
+
+     [1m--staging-bucket[m=[4mSTAGING_BUCKET[m
+        Bucket in which to stage training archives.
+
+        Required only if a file upload is necessary (that is, other flags
+        include local paths) and no other flags implicitly specify an upload
+        path.
+
+     [1m--use-chief-in-tf-config[m=[4mUSE_CHIEF_IN_TF_CONFIG[m
+        Use "chief" role in the cluster instead of "master". This is required
+        for TensorFlow 2.0 and newer versions. Unlike "master" node, "chief"
+        node does not run evaluation.
+
+     [1m--worker-accelerator[m=[[4mcount[m=[4mCOUNT[m],[[4mtype[m=[4mTYPE[m]
+        Hardware accelerator config for the worker nodes. Must specify both the
+        accelerator type (TYPE) for each server and the number of accelerators
+        to attach to each server (COUNT).
+
+         [1mtype[m
+            Type of the accelerator. Choices are
+            nvidia-tesla-a100,nvidia-tesla-k80,nvidia-tesla-p100,nvidia-tesla-p4,nvidia-tesla-t4,nvidia-tesla-v100,tpu-v2,tpu-v2-pod,tpu-v3,tpu-v3-pod
+
+         [1mcount[m
+            Number of accelerators to attach to each machine running the job.
+            Must be greater than 0.
+
+     [1m--worker-image-uri[m=[4mWORKER_IMAGE_URI[m
+        Docker image to run on each worker node. This image must be in
+        Container Registry. If not specified, the value of [1m--master-image-uri[m
+        is used.
+
+     At most one of these may be specified:
+
+       [1m--async[m
+          (DEPRECATED) Display information about the operation in progress
+          without waiting for the operation to complete. Enabled by default and
+          can be omitted; use [1m--stream-logs[m to run synchronously.
+
+       [1m--stream-logs[m
+          Block until job completion and stream the logs while the job runs.
+
+          Note that even if command execution is halted, the job will still run
+          until cancelled with
+
+              $ gcloud ai-platform jobs cancel JOB_ID
+
+     Key resource - The Cloud KMS (Key Management Service) cryptokey that will
+     be used to protect the job. The 'AI Platform Service Agent' service
+     account must hold permission 'Cloud KMS CryptoKey Encrypter/Decrypter'.
+     The arguments in this group can be used to specify the attributes of this
+     resource.
+
+       [1m--kms-key[m=[4mKMS_KEY[m
+          ID of the key or fully qualified identifier for the key. To set the
+          [1mkms-key[m attribute:
+          ▸ provide the argument [1m--kms-key[m on the command line.
+
+          This flag must be specified if any of the other arguments in this
+          group are specified.
+
+       [1m--kms-keyring[m=[4mKMS_KEYRING[m
+          The KMS keyring of the key. To set the [1mkms-keyring[m attribute:
+          ▸ provide the argument [1m--kms-key[m on the command line with a fully
+            specified name;
+          ▸ provide the argument [1m--kms-keyring[m on the command line.
+
+       [1m--kms-location[m=[4mKMS_LOCATION[m
+          The Cloud location for the key. To set the [1mkms-location[m attribute:
+          ▸ provide the argument [1m--kms-key[m on the command line with a fully
+            specified name;
+          ▸ provide the argument [1m--kms-location[m on the command line.
+
+       [1m--kms-project[m=[4mKMS_PROJECT[m
+          The Cloud project for the key. To set the [1mkms-project[m attribute:
+          ▸ provide the argument [1m--kms-key[m on the command line with a fully
+            specified name;
+          ▸ provide the argument [1m--kms-project[m on the command line;
+          ▸ set the property [1mcore/project[m.
+
+     Configure parameter server machine type settings.
+
+       [1m--parameter-server-count[m=[4mPARAMETER_SERVER_COUNT[m
+          Number of parameter servers to use for the training job.
+
+          This flag must be specified if any of the other arguments in this
+          group are specified.
+
+       [1m--parameter-server-machine-type[m=[4mPARAMETER_SERVER_MACHINE_TYPE[m
+          Type of virtual machine to use for training job's parameter servers.
+          This flag must be specified if any of the other arguments in this
+          group are specified machine to use for training job's parameter
+          servers.
+
+          This flag must be specified if any of the other arguments in this
+          group are specified.
+
+     Configure worker node machine type settings.
+
+       [1m--worker-count[m=[4mWORKER_COUNT[m
+          Number of worker nodes to use for the training job.
+
+          This flag must be specified if any of the other arguments in this
+          group are specified.
+
+       [1m--worker-machine-type[m=[4mWORKER_MACHINE_TYPE[m
+          Type of virtual machine to use for training job's worker nodes.
+
+          This flag must be specified if any of the other arguments in this
+          group are specified.
+
+[m[1mGCLOUD WIDE FLAGS[m
+    These flags are available to all commands: --account, --billing-project,
+    --configuration, --flags-file, --flatten, --format, --help,
+    --impersonate-service-account, --log-http, --project, --quiet,
+    --trace-token, --user-output-enabled, --verbosity.
+
+    Run [1m$ gcloud help[m for details.
+
+[m[1mNOTES[m
+    These variants are also available:
+
+        $ gcloud alpha ai-platform jobs submit training
+
+        $ gcloud beta ai-platform jobs submit training
+
+[m

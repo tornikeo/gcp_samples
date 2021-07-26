@@ -1,0 +1,24 @@
+2021-07-26 16:37:33,161 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-26 16:37:33,163 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local']
+2021-07-26 16:37:33,164 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local', 'train']
+2021-07-26 16:37:33,171 DEBUG    root            Running [gcloud.ai-platform.local.train] with arguments: [--module-name: "trainer.task", --package-path: "trainer"]
+2021-07-26 16:37:35,411 INFO     root            launching training process:
+command: /opt/conda/bin/python -m trainer.task
+ config: {
+  "cluster": {},
+  "environment": "cloud",
+  "job": {
+    "args": [],
+    "job_name": "trainer.task"
+  },
+  "task": {}
+}
+2021-07-26 16:37:37,651 DEBUG    root            Executing command: ['/opt/conda/bin/python', '-m', 'trainer.task']
+2021-07-26 16:37:40,908 INFO     root            Display format: "default"
+2021-07-26 16:37:40,909 DEBUG    root            (gcloud.ai-platform.local.train) 
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 815, in Run
+    raise exceptions.ExitCodeNoError(exit_code=command_instance.exit_code)
+googlecloudsdk.calliope.exceptions.ExitCodeNoError

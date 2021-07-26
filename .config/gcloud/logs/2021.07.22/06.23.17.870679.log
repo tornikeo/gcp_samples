@@ -1,0 +1,7 @@
+2021-07-22 06:23:17,872 DEBUG    root            Loaded Command Group: ['gcloud', 'config']
+2021-07-22 06:23:17,874 DEBUG    root            Loaded Command Group: ['gcloud', 'config', 'list']
+2021-07-22 06:23:17,876 DEBUG    root            Running [gcloud.config.list] with arguments: [--format: "value(core.project)", SECTION/PROPERTY: "project"]
+2021-07-22 06:23:17,880 INFO     root            Display format: "config value(core.project)"
+2021-07-22 06:23:17,881 INFO     ___FILE_ONLY___ ultra-evening-318614
+
+2021-07-22 06:23:17,881 DEBUG    root            SDK update checks are disabled.

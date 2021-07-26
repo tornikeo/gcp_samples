@@ -1,0 +1,9 @@
+2021-07-22 06:38:26,652 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 06:38:26,654 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs']
+2021-07-22 06:38:26,658 ERROR    root            (gcloud.ai-platform.jobs) Command name argument expected.
+2021-07-22 06:38:26,689 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'stream_logs']
+2021-07-22 06:38:26,692 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'submit']
+2021-07-22 06:38:26,695 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'update']
+2021-07-22 06:38:26,698 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'describe']
+2021-07-22 06:38:26,701 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'list']
+2021-07-22 06:38:26,705 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'jobs', 'cancel']

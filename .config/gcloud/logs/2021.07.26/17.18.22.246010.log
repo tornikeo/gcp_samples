@@ -1,0 +1,18 @@
+2021-07-26 17:18:22,261 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-26 17:18:22,263 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local']
+2021-07-26 17:18:22,265 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local', 'train']
+2021-07-26 17:18:22,271 DEBUG    root            Running [gcloud.ai-platform.local.train] with arguments: [--module-name: "trainer.task", --package-path: "trainer"]
+2021-07-26 17:18:24,538 INFO     root            launching training process:
+command: /opt/conda/bin/python -m trainer.task
+ config: {
+  "cluster": {},
+  "environment": "cloud",
+  "job": {
+    "args": [],
+    "job_name": "trainer.task"
+  },
+  "task": {}
+}
+2021-07-26 17:18:26,791 DEBUG    root            Executing command: ['/opt/conda/bin/python', '-m', 'trainer.task']
+2021-07-26 17:18:30,437 INFO     root            Display format: "default"
+2021-07-26 17:18:30,438 DEBUG    root            SDK update checks are disabled.

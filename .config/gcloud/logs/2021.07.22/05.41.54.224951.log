@@ -1,0 +1,119 @@
+2021-07-22 05:41:54,239 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-22 05:41:54,241 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local']
+2021-07-22 05:41:54,242 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'local', 'train']
+2021-07-22 05:41:54,244 DEBUG    root            Running [gcloud.ai-platform.local.train] with arguments: [--help: "None"]
+2021-07-22 05:41:54,246 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai_platform']
+2021-07-22 05:41:54,247 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'local']
+2021-07-22 05:41:54,248 DEBUG    root            Loaded Command Group: ['gcloud', 'alpha', 'ai-platform', 'local', 'train']
+2021-07-22 05:41:54,249 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai_platform']
+2021-07-22 05:41:54,251 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'local']
+2021-07-22 05:41:54,252 DEBUG    root            Loaded Command Group: ['gcloud', 'beta', 'ai-platform', 'local', 'train']
+2021-07-22 05:41:54,256 DEBUG    root            Loaded Command Group: ['gcloud', 'help']
+2021-07-22 05:41:54,264 INFO     ___FILE_ONLY___ [m[1mNAME[m
+    gcloud ai-platform local train - run an AI Platform training job locally
+
+[m[1mSYNOPSIS[m
+    [1mgcloud ai-platform local train[m [1m--module-name[m=[4mMODULE_NAME[m [[1m--distributed[m]
+        [[1m--evaluator-count[m=[4mEVALUATOR_COUNT[m] [[1m--job-dir[m=[4mJOB_DIR[m]
+        [[1m--package-path[m=[4mPACKAGE_PATH[m]
+        [[1m--parameter-server-count[m=[4mPARAMETER_SERVER_COUNT[m]
+        [[1m--start-port[m=[4mSTART_PORT[m; default=27182] [[1m--worker-count[m=[4mWORKER_COUNT[m]
+        [[4mGCLOUD_WIDE_FLAG ...[m] [-- [4mUSER_ARGS[m ...]
+
+[m[1mDESCRIPTION[m
+    This command runs the specified module in an environment similar to that of
+    a live AI Platform Training Job.
+
+    This is especially useful in the case of testing distributed models, as it
+    allows you to validate that you are properly interacting with the AI
+    Platform cluster configuration. If your model expects a specific number of
+    parameter servers or workers (i.e. you expect to use the CUSTOM machine
+    type), use the --parameter-server-count and --worker-count flags to further
+    specify the desired cluster configuration, just as you would in your cloud
+    training job configuration:
+
+        $ gcloud ai-platform local train --module-name trainer.task \
+                --package-path /path/to/my/code/trainer \
+                --distributed \
+                --parameter-server-count 4 \
+                --worker-count 8
+
+    Unlike submitting a training job, the --package-path parameter can be
+    omitted, and will use your current working directory.
+
+    AI Platform Training sets a TF_CONFIG environment variable on each VM in
+    your training job. You can use TF_CONFIG to access the cluster description
+    and the task description for each VM.
+
+    Learn more about TF_CONFIG:
+    https://cloud.google.com/ai-platform/training/docs/distributed-training-details.
+
+[m[1mPOSITIONAL ARGUMENTS[m
+     [-- [4mUSER_ARGS[m ...]
+        Additional user arguments to be forwarded to user code. Any relative
+        paths will be relative to the [1mparent[m directory of [1m--package-path[m.
+
+        The '--' argument must be specified between gcloud specific args on the
+        left and USER_ARGS on the right.
+
+[m[1mREQUIRED FLAGS[m
+     [1m--module-name[m=[4mMODULE_NAME[m
+        Name of the module to run.
+
+[m[1mOPTIONAL FLAGS[m
+     [1m--distributed[m
+        Runs the provided code in distributed mode by providing cluster
+        configurations as environment variables to subprocesses
+
+     [1m--evaluator-count[m=[4mEVALUATOR_COUNT[m
+        Number of evaluators with which to run. Ignored if --distributed is not
+        specified. Default: 0
+
+     [1m--job-dir[m=[4mJOB_DIR[m
+        Cloud Storage path or local_directory in which to store training
+        outputs and other data needed for training.
+
+        This path will be passed to your TensorFlow program as the [1m--job-dir[m
+        command-line arg. The benefit of specifying this field is that AI
+        Platform will validate the path for use in training. However, note that
+        your training program will need to parse the provided [1m--job-dir[m
+        argument.
+
+     [1m--package-path[m=[4mPACKAGE_PATH[m
+        Path to a Python package to build. This should point to a [1mlocal[m
+        directory containing the Python source for the job. It will be built
+        using [1msetuptools[m (which must be installed) using its [1mparent[m directory
+        as context. If the parent directory contains a [1msetup.py[m file, the build
+        will use that; otherwise, it will use a simple built-in one.
+
+     [1m--parameter-server-count[m=[4mPARAMETER_SERVER_COUNT[m
+        Number of parameter servers with which to run. Ignored if --distributed
+        is not specified. Default: 2
+
+     [1m--start-port[m=[4mSTART_PORT[m; default=27182
+        Start of the range of ports reserved by the local cluster. This command
+        will use a contiguous block of ports equal to parameter-server-count +
+        worker-count + 1.
+
+        If --distributed is not specified, this flag is ignored.
+
+     [1m--worker-count[m=[4mWORKER_COUNT[m
+        Number of workers with which to run. Ignored if --distributed is not
+        specified. Default: 2
+
+[m[1mGCLOUD WIDE FLAGS[m
+    These flags are available to all commands: --account, --billing-project,
+    --configuration, --flags-file, --flatten, --format, --help,
+    --impersonate-service-account, --log-http, --project, --quiet,
+    --trace-token, --user-output-enabled, --verbosity.
+
+    Run [1m$ gcloud help[m for details.
+
+[m[1mNOTES[m
+    These variants are also available:
+
+        $ gcloud alpha ai-platform local train
+
+        $ gcloud beta ai-platform local train
+
+[m

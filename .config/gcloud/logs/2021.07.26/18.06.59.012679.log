@@ -1,0 +1,47 @@
+2021-07-26 18:06:59,028 DEBUG    root            Loaded Command Group: ['gcloud', 'ai_platform']
+2021-07-26 18:06:59,032 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'versions']
+2021-07-26 18:06:59,044 DEBUG    root            Loaded Command Group: ['gcloud', 'ai-platform', 'versions', 'create']
+2021-07-26 18:06:59,052 DEBUG    root            Running [gcloud.ai-platform.versions.create] with arguments: [--model: "simple", --origin: "output", --python-version: "3.7", --region: "us-central1", --runtime-version: "2.1", VERSION: "v1"]
+2021-07-26 18:06:59,054 INFO     ___FILE_ONLY___ Using endpoint [https://us-central1-ml.googleapis.com/]
+
+2021-07-26 18:06:59,067 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-26 18:06:59,072 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-26 18:06:59,073 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-26 18:06:59,074 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-26 18:06:59,077 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 249
+2021-07-26 18:06:59,095 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-26 18:06:59,096 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-26 18:06:59,098 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-26 18:06:59,099 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-26 18:06:59,101 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 249
+2021-07-26 18:06:59,110 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-26 18:06:59,111 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-26 18:06:59,113 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-26 18:06:59,113 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-26 18:06:59,116 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 249
+2021-07-26 18:06:59,122 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true
+2021-07-26 18:06:59,123 DEBUG    urllib3.connectionpool Starting new HTTP connection (1): metadata.google.internal:80
+2021-07-26 18:06:59,124 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/?recursive=true HTTP/1.1" 200 155
+2021-07-26 18:06:59,125 DEBUG    google.auth.transport.requests Making request: GET http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token
+2021-07-26 18:06:59,128 DEBUG    urllib3.connectionpool http://metadata.google.internal:80 "GET /computeMetadata/v1/instance/service-accounts/114789316337-compute@developer.gserviceaccount.com/token HTTP/1.1" 200 249
+2021-07-26 18:06:59,131 DEBUG    root            (gcloud.ai-platform.versions.create) If --origin is provided as a local path, --staging-bucket must be given as well.
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/ml_engine/versions_util.py", line 113, in Create
+    origin = uploads.UploadDirectoryIfNecessary(origin, staging_bucket)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/ml_engine/uploads.py", line 139, in UploadDirectoryIfNecessary
+    'The path provided was local, but no staging bucket for upload '
+googlecloudsdk.command_lib.ml_engine.uploads.MissingStagingBucketException: The path provided was local, but no staging bucket for upload was provided.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/cli.py", line 984, in Execute
+    resources = calliope_command.Run(cli=self, args=args)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/calliope/backend.py", line 809, in Run
+    resources = command_instance.Run(args)
+  File "/usr/lib/google-cloud-sdk/lib/surface/ai_platform/versions/create.py", line 147, in Run
+    autoscaling_hidden=False)
+  File "/usr/lib/google-cloud-sdk/lib/googlecloudsdk/command_lib/ml_engine/versions_util.py", line 116, in Create
+    'If --origin is provided as a local path, --staging-bucket must be '
+googlecloudsdk.command_lib.ml_engine.versions_util.InvalidArgumentCombinationError: If --origin is provided as a local path, --staging-bucket must be given as well.
+2021-07-26 18:06:59,134 ERROR    root            (gcloud.ai-platform.versions.create) If --origin is provided as a local path, --staging-bucket must be given as well.
